@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aida & Wildan | 22.12.2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#FDF6E8;font-family:'Cormorant Garamond',serif;color:#2C3A4A;text-align:center;overflow-x:hidden}
+.cover{position:fixed;inset:0;z-index:100;background:url('https://i.ibb.co.com/TBw65z5r/IMG-6112.jpg') center/cover;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;transition:.9s}
+.cover:before{content:'';position:absolute;inset:0;background:rgba(255,248,235,.45)}
+.cover>*{position:relative;z-index:2}
+.cover.hide{transform:translateY(-100%);opacity:0;pointer-events:none}
+.frame{border:2px solid #C9A96A;outline:1px solid #C9A96A;outline-offset:6px;padding:22px 18px;background:rgba(255,255,255,.92);border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.2);max-width:380px;width:100%}
+.names{font-family:'Playfair Display',serif;font-size:26px;letter-spacing:2px;margin:10px 0 4px}
+.btn{background:#0F2238;color:#FFDFA8;padding:14px 28px;border-radius:30px;border:1px solid #C9A96A;font-size:15px;margin-top:14px;cursor:pointer}
+.couple-img{width:100%;height:auto !important;border-radius:16px;border:2px solid #C9A96A;margin:12px 0;object-fit:contain;background:#fff;display:block}
+section{padding:0;background:#FDF6E8}
+.inner{max-width:480px;margin:0 auto;padding:35px 18px}
+.arch{background:#fff;border:3px solid #C9A96A;border-radius:200px 200px 24px 24px;padding:40px 20px;position:relative;overflow:hidden}
+.script{font-family:'Great Vibes',cursive;font-size:50px;color:#0F2238;line-height:1}
+.gold-line{color:#C9A96A;letter-spacing:8px;margin:10px 0}
+.card{background:white;border:1.5px solid #C9A96A;border-radius:20px;padding:24px 16px;margin:18px 0;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.navy{background:#0F2238;color:white;padding:45px 18px}
+.count{display:flex;gap:8px;justify-content:center;margin:20px 0}
+.count div{background:#FFDFA8;color:#0F2238;border-radius:14px;padding:14px 6px;min-width:70px;border:1px solid #C9A96A}
+.count b{font-size:26px;display:block;font-family:'Playfair Display',serif}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}
+.gallery img{width:100%;height:180px;object-fit:contain;background:#fff;border-radius:14px;border:2px solid #C9A96A}
+.music{position:fixed;bottom:18px;right:18px;z-index:99;background:#C9A96A;color:#0F2238;width:54px;height:54px;border-radius:50%;border:2px solid white;font-size:22px}
+input,textarea,select{width:100%;padding:13px;border-radius:12px;border:1px solid #C9A96A;margin:8px 0;font-family:inherit;background:#FFFDF8}
+.rsvp-btns{display:flex;gap:10px;margin:10px 0}
+.rsvp-btns button{flex:1;padding:13px;border-radius:12px;border:1.5px solid #C9A96A;background:white;font-family:inherit;font-size:15px;cursor:pointer}
+.rsvp-btns button.active{background:#0F2238;color:#FFDFA8}
+#hujan{position:fixed;inset:0;z-index:99999;pointer-events:none;overflow:hidden}
+.petal{position:fixed;top:-30px;z-index:99999;pointer-events:none;animation:jatuh linear forwards}
+@keyframes jatuh{0%{transform:translateY(-30px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(360deg);opacity:.9}}
+</style></head>
+<body>
+<div id="hujan"></div>
+<audio id="lagu" loop preload="auto"><source src="https://mijuinvitation.my.id/wp-content/uploads/2026/10/Janji-Suci-Cover-Saxophone-Yovie-And-Nuno-AudioTrimmer.com_.mp3" type="audio/mpeg"></audio>
+<button class="music" onclick="let a=document.getElementById('lagu');a.paused?a.play():a.pause()">♪</button>
+<div class="cover" id="cover">
+  <div class="frame">
+    <p style="letter-spacing:4px;font-size:12px">THE WEDDING OF</p>
+    <img src="https://i.ibb.co.com/zV43RW4r/IMG-6110.jpg" class="couple-img">
+    <div class="names">AIDA & WILDAN</div>
+    <p>Selasa, 22 Desember 2026<br>Kp. Darmamukti - Tasikmalaya</p>
+    <div style="background:#0F2238;color:white;padding:12px;border-radius:12px;margin-top:14px">
+      <p style="font-size:13px">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+      <b id="namaTamu" style="font-size:18px">Nama Tamu</b>
+    </div>
+    <button class="btn" onclick="buka()">🌸 BUKA UNDANGAN 🌸</button>
+  </div>
+  <p style="color:#0F2238;margin-top:12px;font-weight:bold">22 . 12 . 2026</p>
+</div>
+<section><div class="inner"><div class="arch">
+  <p style="letter-spacing:3px">THE WEDDING OF</p>
+  <div class="script">Aida</div><p>&</p><div class="script">Wildan</div>
+  <div class="gold-line">🌸 * 🌸</div>
+  <p><b>#AidaWithWildan</b></p><p><b>22 . 12 . 2026</b></p>
+  <img src="https://i.ibb.co.com/SwC5hcWY/IMG-6111.jpg" class="couple-img">
+  <p style="font-size:13px;margin-top:8px">🌸 Scroll ke bawah ya, masih banyak surprise-nya! ❄️</p>
+</div></div></section>
+<section style="background:#0F2238;color:#FFDFA8"><div class="inner">
+  <h2 style="letter-spacing:6px;color:white">WITH LOVE</h2>
+  <p style="line-height:1.8;margin:16px 0">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."</p>
+  <p><b>QS. Ar Rum : 21</b></p>
+</div></section>
+<section><div class="inner"><div class="arch">
+  <h2 class="script">We Are Getting Married!</h2>
+  <p style="margin:12px 0">Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami:</p>
+  <img src="https://i.ibb.co.com/gLYk2JBK/IMG-6114.jpg" class="couple-img">
+  <p><b>Aida Lestari (Idut)</b><br>Putri dari Bpk. Wawan & Ibu Manah</p>
+  <div class="gold-line">- 🌸 LOVE 🌸 -</div>
+  <img src="https://i.ibb.co.com/prQFQ2qD/IMG-6113.jpg" class="couple-img">
+  <p><b>Wildan Sapari Ilmi (Idute)</b><br>Putra dari Bpk. Ejeb (Alm) & Ibu Cucu</p>
+  <div class="gallery">
+    <img src="https://i.ibb.co.com/HLdzJ4cd/IMG-6115.jpg">
+    <img src="https://i.ibb.co.com/fzrsczX8/IMG-6108.jpg">
+  </div>
+</div></div></section>
+<div class="navy"><div class="inner">
+  <h2 style="letter-spacing:5px;font-size:30px">SAVE THE DATE</h2>
+  <p>22 Desember 2026 - Tasikmalaya</p>
+  <div class="count"><div><b id="d">00</b>Days</div><div><b id="h">00</b>Hours</div><div><b id="m">00</b>Minutes</div><div><b id="s">00</b>Seconds</div></div>
+  <p>Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.</p>
+</div></div>
+<section><div class="inner">
+  <div class="card"><div class="script">Akad Nikah</div><p><b>SELASA, 22 DESEMBER 2026</b><br>08.00 WIB</p><hr style="margin:14px 0;border-color:#C9A96A"><p><b>RUMAH MEMPELAI WANITA</b><br>Kp. Darmamukti RT 14 / RW 003<br>Desa Mandalasari, Kec. Puspahiang<br>Kab. Tasikmalaya</p><a href="https://maps.google.com/?q=Darmamukti+Mandalasari+Puspahiang+Tasikmalaya" target="_blank"><button class="btn">Google Maps</button></a></div>
+  <div class="card"><div class="script">Resepsi</div><p><b>SELASA, 22 DESEMBER 2026</b><br>10.00 WIB - Selesai</p><hr style="margin:14px 0;border-color:#C9A96A"><p><b>RUMAH MEMPELAI WANITA</b><br>Kp. Darmamukti RT 14 / RW 003<br>Desa Mandalasari, Kec. Puspahiang<br>Kab. Tasikmalaya</p><a href="https://maps.google.com/?q=Darmamukti+Mandalasari+Puspahiang+Tasikmalaya" target="_blank"><button class="btn">Google Maps</button></a></div>
+</div></section>
+<section style="background:#fff"><div class="inner">
+  <h2 style="letter-spacing:3px">RSVP & KONFIRMASI</h2>
+  <p style="margin:10px 0">Mohon konfirmasi kehadiran Anda ya!</p>
+  <div class="card" style="text-align:left">
+    <label>Nama Lengkap</label>
+    <input id="rsvpNama" placeholder="Nama kamu...">
+    <label>Konfirmasi Kehadiran</label>
+    <div class="rsvp-btns">
+      <button type="button" id="btnHadir" onclick="pilihHadir('Hadir')">HADIR</button>
+      <button type="button" id="btnTidak" onclick="pilihHadir('Tidak Hadir')">TIDAK HADIR</button>
+    </div>
+    <label>Jumlah Tamu yang Hadir</label>
+    <select id="jumlahTamu"><option>1 Orang</option><option>2 Orang</option><option>3 Orang</option><option>4 Orang</option></select>
+    <label>Ucapan & Doa</label>
+    <textarea id="ucapan" placeholder="Tulis doa untuk Aida & Wildan..."></textarea>
+    <button class="btn" style="width:100%" onclick="kirimRSVP()">KIRIM KONFIRMASI</button>
+    <p id="rsvpPesan" style="text-align:center;margin-top:10px;color:green;font-weight:bold"></p>
+  </div>
+  <p style="font-size:14px;margin-top:10px">Atau konfirmasi langsung via WhatsApp:</p>
+  <a href="https://wa.me/6282218243280?text=Halo%20Aida%20%26%20Wildan!%20Saya%20mau%20konfirmasi%20kehadiran%20untuk%20pernikahan%20kalian." target="_blank"><button class="btn" style="background:#25D366;color:white;border-color:#25D366">Reservasi via WA</button></a>
+</div></section>
+<section><div class="inner">
+  <h2 style="letter-spacing:3px">💐 WEDDING GIFTS 💐</h2>
+  <p>Doa restu Anda adalah kado terindah.</p>
+  <div class="card">
+    <p style="font-size:28px">💐</p>
+    <p><b>DANA - AIDA LESTARI</b></p>
+    <p style="font-size:22px;margin:8px 0"><b>0822-1824-3280</b></p>
+    <p>a.n Aida Lestari</p>
+    <button class="btn" onclick="salin('082218243280')">Salin Nomor DANA</button>
+  </div>
+  <div class="card">
+    <p style="font-size:28px">🌸</p>
+    <p><b>SEABANK - WILDAN</b></p>
+    <p style="font-size:22px;margin:8px 0"><b>9014 5998 0109</b></p>
+    <p>a.n Wildan Sapari Ilmi</p>
+    <button class="btn" onclick="salin('901459980109')">Salin No. Rekening</button>
+  </div>
+</div></section>
+<section style="background:#0F2238;color:white"><div class="inner" style="padding:50px 18px">
+  <p style="line-height:1.9;font-size:18px;margin:20px 0">
+    Kehadiran Bapak/Ibu/Saudara/i<br>
+    Merupakan kebahagiaan bagi kami<br>
+    Atas perhatian dan doa restunya<br>
+    kami ucapkan terimakasih
+  </p>
+  <p style="letter-spacing:4px;font-size:13px">HORMAT KAMI,</p>
+</div></section>
+<section><div class="inner"><div class="arch">
+  <p style="letter-spacing:3px">THE WEDDING OF</p>
+  <img src="https://i.ibb.co.com/4RgyHx5K/IMG-6116.jpg" class="couple-img">
+  <div class="script" style="font-size:60px">Aida</div>
+  <p style="font-size:24px">&</p>
+  <div class="script" style="font-size:60px">Wildan</div>
+  <div class="gold-line">🌸 * 🌸</div>
+  <p><b>22 . 12 . 2026</b></p>
+  <p style="margin-top:10px">Terima kasih atas doa & kehadirannya</p>
+  <p style="font-size:12px;margin-top:15px">Made with love by Aida & Wildan</p>
+</div></div></section>
+<script>
+let statusHadir='Hadir';
+function pilihHadir(s){statusHadir=s;document.getElementById('btnHadir').classList.toggle('active',s==='Hadir');document.getElementById('btnTidak').classList.toggle('active',s==='Tidak Hadir');}
+pilihHadir('Hadir');
+function salin(teks){navigator.clipboard.writeText(teks);alert('Berhasil disalin: '+teks)}
+function kirimRSVP(){
+  let nama=document.getElementById('rsvpNama').value||'Tamu';
+  let jml=document.getElementById('jumlahTamu').value;
+  let ucap=document.getElementById('ucapan').value||'';
+  document.getElementById('rsvpPesan').innerText='Terima kasih '+nama+' sudah konfirmasi: '+statusHadir+' ('+jml+')';
+  let pesan=encodeURIComponent('Halo Aida & Wildan! Saya '+nama+' konfirmasi: '+statusHadir+' - '+jml+' | Ucapan: '+ucap);
+  window.open('https://wa.me/6282218243280?text='+pesan,'_blank');
+}
+const u=new URLSearchParams(location.search); if(u.get('to')) document.getElementById('namaTamu').innerText=u.get('to');
+const target=new Date('2026-12-22T08:00:00+07:00').getTime();
+setInterval(()=>{let diff=target-new Date().getTime(); if(diff<0) diff=0;
+document.getElementById('d').innerText=Math.floor(diff/86400000);
+document.getElementById('h').innerText=Math.floor(diff%86400000/3600000);
+document.getElementById('m').innerText=Math.floor(diff%3600000/60000);
+document.getElementById('s').innerText=Math.floor(diff%60000/1000);},1000);
+function buka(){document.getElementById('cover').classList.add('hide');document.getElementById('lagu').play().catch(()=>{});window.scrollTo(0,0)}
+// HUJAN BUNGA & SALJU - KALEM
+let bunga=['❄️','🌸','🤍'];
+function bikinBunga(){
+  let e=document.createElement('div');e.className='petal';e.innerText=bunga[Math.floor(Math.random()*bunga.length)];
+  e.style.left=Math.random()*100+'vw';
+  e.style.fontSize=(20+Math.random()*14)+'px';
+  e.style.animationDuration=(5+Math.random()*3)+'s';
+  document.getElementById('hujan').appendChild(e);
+  setTimeout(()=>e.remove(),9000);
+}
+for(let i=0;i<10;i++){ setTimeout(bikinBunga, i*400); }
+setInterval(bikinBunga,1200);
+</script>
+</body></html>
