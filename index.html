@@ -50,9 +50,20 @@ input,textarea,select{width:100%;padding:13px;border-radius:12px;border:1px soli
 @keyframes jatuh{0%{transform:translateY(-30px) rotate(0deg);opacity:0}10%{opacity:1}100%{transform:translateY(110vh) rotate(360deg);opacity:.7}}
 footer{padding:25px;background:var(--navy);color:var(--pale)}
 .guestbook-note{font-size:15px;margin:8px 0 16px}
-#HCB_comment_box{margin-top:12px;text-align:left;font-family:Arial,sans-serif;font-size:14px}
+
+/* === FIX UCAPAN & DOA - BIAR GAK KEPOTONG & CANTIK === */
+#HCB_comment_box{margin-top:12px;text-align:left;font-family:'Cormorant Garamond',serif !important;font-size:16px;width:100% !important;max-width:100% !important;overflow:hidden !important}
+#HCB_comment_box *{box-sizing:border-box !important;max-width:100% !important}
 #HCB_comment_box a{color:var(--navy)}
-#HCB_comment_box input,#HCB_comment_box textarea{font-family:Arial,sans-serif;font-size:16px}
+#HCB_comment_box input[type="text"],#HCB_comment_box textarea{width:100% !important;display:block !important;font-family:'Cormorant Garamond',serif !important;font-size:16px !important;border:1px solid var(--gold) !important;border-radius:12px !important;padding:13px !important;background:#FFFDF8 !important;color:var(--navy) !important;margin:8px 0 !important}
+#HCB_comment_box textarea{min-height:100px !important}
+#HCB_comment_box .hcb-comment{border:1px solid #E8DCC3 !important;border-radius:12px !important;padding:12px !important;margin:12px 0 !important;background:#FFFDF8 !important}
+/* Tombol Kirim jadi full & navy */
+#HCB_comment_box .btn,#HCB_comment_box input[type="submit"],#HCB_comment_box button[type="submit"],#HCB_comment_box #hcb_submit{width:100% !important;display:block !important;background:var(--navy) !important;color:var(--pale) !important;border:1px solid var(--gold) !important;border-radius:30px !important;padding:13px 10px !important;font-size:15px !important;font-weight:bold !important;white-space:normal !important;line-height:1.4 !important;float:none !important;margin:10px 0 0 !important}
+/* Sembunyikan Upload Image, RSS, dan branding */
+#HCB_comment_box #hcb_form_add_image,#HCB_comment_box .hcb-image-btn,#HCB_comment_box input[type="file"],#HCB_comment_box .btn-secondary,#HCB_comment_box .hcb-icon,#HCB_comment_box .home-desc,#HCB_comment_box a[href*="htmlcommentbox.com"]{display:none !important}
+#HCB_comment_box .hcb-comment .hcb-comment-tb{display:none !important}
+
 @media(max-height:700px){.cover{justify-content:flex-start}.frame{margin:8px auto}.cover .couple-img{height:30vh;max-height:220px}.names{font-size:23px}.cover .btn{margin-top:9px;padding:11px 22px}}
 @media(max-width:360px){.count div{min-width:57px;padding:10px 4px}.gallery img{height:155px}}
 </style>
@@ -232,16 +243,22 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 <button class="btn" style="width:100%" onclick="kirimRSVP()">Kirim Konfirmasi WhatsApp</button>
 </div>
 </div>
-  
-</section><style>
-#HCB_comment_box{width:100% !important;max-width:100% !important;overflow:hidden !important;font-family:Georgia,serif !important;text-align:left !important}
-#HCB_comment_box input,#HCB_comment_box textarea{width:100% !important;max-width:100% !important;box-sizing:border-box !important;border:1px solid #C9A96A !important;border-radius:12px !important;padding:12px !important;font-size:14px !important;background:#FFFCF7 !important}
-#HCB_comment_box textarea{min-height:90px !important}
-#HCB_comment_box .btn,#HCB_comment_box input[type="submit"],#HCB_comment_box button{width:100% !important;background:#C9A96A !important;color:white !important;border:none !important;border-radius:25px !important;padding:13px !important;font-weight:bold !important;font-size:15px !important;white-space:normal !important}
-#HCB_comment_box .hcb-icon,#HCB_comment_box a[href*="htmlcommentbox"],#HCB_comment_box .home-desc,#HCB_comment_box #hcb_form_add_image,#HCB_comment_box .btn-secondary{display:none !important}
-#HCB_comment_box .hcb-comment{border:1px solid #E8DCC3 !important;border-radius:12px !important;padding:12px !important;margin:10px 0 !important;background:#FFFDF8 !important}
-</style>
-  
+</section>
+
+<!-- BUKU TAMU / UCAPAN & DOA -->
+<section>
+<div class="inner">
+<div class="card">
+<p class="gold-line">✦ WEDDING GUESTBOOK ✦</p>
+<h2 class="script">Ucapan & Doa</h2>
+<p class="guestbook-note">Tuliskan doa dan ucapan terbaik untuk Aida & Wildan. Ucapan yang dikirim dapat dibaca oleh tamu lainnya.</p>
+<div id="HCB_comment_box">
+<a href="https://www.htmlcommentbox.com">Comment Box</a> sedang memuat ucapan...
+</div>
+</div>
+</div>
+</section>
+
 <!-- PENUTUP -->
 <section>
 <div class="inner">
@@ -396,8 +413,6 @@ hcb_user.err_spam='Ucapan terdeteksi sebagai spam.';
 hcb_user.MAX_CHARS=2048;
 hcb_user.RELATIVE_DATES=true;
 </script>
-
-<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/shady/skin.css">
 
 <script type="text/javascript" id="hcb">
 if(!window.hcb_user){window.hcb_user={};}
