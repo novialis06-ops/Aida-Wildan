@@ -234,20 +234,59 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 </div>
 </section>
 
-<!-- BUKU TAMU / UCAPAN & DOA -->
-<section>
-<div class="inner">
-<div class="card">
-<p class="gold-line">✦ WEDDING GUESTBOOK ✦</p>
-<h2 class="script">Ucapan & Doa</h2>
-<p class="guestbook-note">Tuliskan doa dan ucapan terbaik untuk Aida & Wildan. Ucapan yang dikirim dapat dibaca oleh tamu lainnya.</p>
-<div id="HCB_comment_box">
-<a href="https://www.htmlcommentbox.com">Comment Box</a> sedang memuat ucapan...
-</div>
-</div>
-</div>
-</section>
+/* BENERIN UCAPAN & DOA BIAR CANTIK */
+#HCB_comment_box{
+  width:100% !important;
+  max-width:100% !important;
+  overflow:hidden !important;
+  font-family:Georgia,serif !important;
+  text-align:left !important;
+}
+#HCB_comment_box input,
+#HCB_comment_box textarea{
+  width:100% !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+  border:1px solid #C9A96A !important;
+  border-radius:12px !important;
+  padding:12px !important;
+  font-size:14px !important;
+  background:#FFFCF7 !important;
+}
+#HCB_comment_box textarea{
+  min-height:90px !important;
+}
 
+/* TOMBOL KIRIM JADI FULL & GOLD */
+#HCB_comment_box .btn,
+#HCB_comment_box input[type="submit"],
+#HCB_comment_box button{
+  width:100% !important;
+  background:#C9A96A !important;
+  color:white !important;
+  border:none !important;
+  border-radius:25px !important;
+  padding:13px !important;
+  font-weight:bold !important;
+  font-size:15px !important;
+  white-space:normal !important;
+}
+
+/* SEMBUNYIIN YANG GAK PERLU */
+#HCB_comment_box .hcb-icon,
+#HCB_comment_box a[href*="htmlcommentbox"],
+#HCB_comment_box .home-desc,
+#HCB_comment_box #hcb_form_add_image,
+#HCB_comment_box .btn-secondary{
+  display:none !important;
+}
+#HCB_comment_box .hcb-comment{
+  border:1px solid #E8DCC3 !important;
+  border-radius:12px !important;
+  padding:12px !important;
+  margin:10px 0 !important;
+  background:#FFFDF8 !important;
+}
 <!-- PENUTUP -->
 <section>
 <div class="inner">
