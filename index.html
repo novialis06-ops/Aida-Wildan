@@ -51,7 +51,7 @@ input,textarea,select{width:100%;padding:13px;border-radius:12px;border:1px soli
 footer{padding:25px;background:var(--navy);color:var(--pale)}
 .guestbook-note{font-size:15px;margin:8px 0 16px}
 
-/* === FIX UCAPAN & DOA - FINAL BAHASA INDONESIA === */
+/* === FIX UCAPAN & DOA - FINAL === */
 #HCB_comment_box{margin-top:12px;text-align:left;font-family:'Cormorant Garamond',serif !important;font-size:16px;width:100% !important;max-width:100% !important;overflow:hidden !important}
 #HCB_comment_box *{box-sizing:border-box !important;max-width:100% !important}
 #HCB_comment_box a{color:var(--navy)}
@@ -59,7 +59,6 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 #HCB_comment_box textarea{min-height:100px !important}
 #HCB_comment_box .hcb-comment{border:1px solid #E8DCC3 !important;border-radius:12px !important;padding:12px !important;margin:12px 0 !important;background:#FFFDF8 !important}
 #HCB_comment_box .btn,#HCB_comment_box input[type="submit"],#HCB_comment_box button[type="submit"],#HCB_comment_box #hcb_submit{width:100% !important;display:block !important;background:var(--navy) !important;color:var(--pale) !important;border:1px solid var(--gold) !important;border-radius:30px !important;padding:13px 10px !important;font-size:15px !important;font-weight:bold !important;white-space:normal !important;line-height:1.4 !important;float:none !important;margin:10px 0 0 !important}
-/* Sembunyikan judul dobel + Upload Image + RSS + branding + Like Reply Flag */
 #HCB_comment_box h3,#HCB_comment_box .hcb-comment-header,#HCB_comment_box #hcb_form_add_image,#HCB_comment_box .hcb-image-btn,#HCB_comment_box input[type="file"],#HCB_comment_box .btn-secondary,#HCB_comment_box .hcb-icon,#HCB_comment_box .home-desc,#HCB_comment_box a[href*="htmlcommentbox.com"]{display:none !important}
 #HCB_comment_box .hcb-comment .hcb-comment-tb,#HCB_comment_box .hcb-comment-footer,#HCB_comment_box .comment-actions{display:none !important}
 
@@ -399,11 +398,9 @@ setInterval(buatBunga,1200);
 setInterval(function(){
   var box=document.getElementById('HCB_comment_box');
   if(!box) return;
-  // Hapus judul dobel "Ucapan & Doa" yang dari Comment Box
   box.querySelectorAll('h3, .hcb-comment-header, b').forEach(function(el){
     if(el.textContent.trim()==='Ucapan & Doa') el.style.display='none';
   });
-  // Ganti teks Inggris jadi Indonesia
   box.innerHTML = box.innerHTML
     .replaceAll('Thank you for commenting!','Terima kasih sudah mengirim ucapan! 💌')
     .replaceAll('within the last minute','baru saja')
@@ -414,10 +411,10 @@ setInterval(function(){
 },1000);
 </script>
 
-<!-- HTML COMMENT BOX -->
+<!-- HTML COMMENT BOX - SUDAH DIKOSONGIN, PAGE BARU -->
 <script>
 window.hcb_user=window.hcb_user||{};
-hcb_user.PAGE='aida-wildan-22122026';
+hcb_user.PAGE='aida-wildan-22122026-baru';
 hcb_user.comments_header='';
 hcb_user.name_label='Nama';
 hcb_user.content_label='Tuliskan ucapan dan doa di sini...';
