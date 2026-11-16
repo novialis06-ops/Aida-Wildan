@@ -50,16 +50,14 @@ input,textarea,select{width:100%;padding:13px;border-radius:12px;border:1px soli
 @keyframes jatuh{0%{transform:translateY(-30px) rotate(0deg);opacity:0}10%{opacity:1}100%{transform:translateY(110vh) rotate(360deg);opacity:.7}}
 footer{padding:25px;background:var(--navy);color:var(--pale)}
 .guestbook-note{font-size:15px;margin:8px 0 16px}
-
-/* === KOTAK TANGGAL DI DALAM CARD PUTIH === */
 .date-box{display:flex;align-items:center;justify-content:center;border:1.5px solid var(--gold);border-radius:14px;overflow:hidden;margin:14px 6px}
 .date-box div{flex:1;padding:10px 4px;font-size:16px;color:var(--navy)}
 .date-box div:nth-child(2){border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold);background:#FDF6E8}
 .date-num{font-family:'Playfair Display',serif;font-size:32px;line-height:1;display:block;color:var(--navy)}
 .date-month{font-size:12px;letter-spacing:1px}
 
-/* === LOVE STORY - DARI CHAT JADI HALAL === */
-.love-item{background:#FFFDF8;border:1.5px solid var(--gold);border-radius:16px;padding:18px;margin:16px 0;position:relative;text-align:left}
+/* === LOVE STORY - LANGSUNG MUNCUL, GAK PAKE NUNGGU === */
+.love-item{background:#FFFDF8;border:1.5px solid var(--gold);border-radius:16px;padding:18px;margin:16px 0;position:relative;text-align:left;opacity:1 !important;visibility:visible !important;transform:none !important}
 .love-item b{color:var(--navy);font-size:19px;display:block;margin-bottom:4px}
 .love-emoji{font-size:28px;display:block;margin-bottom:6px}
 
@@ -162,14 +160,14 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 </div>
 </section>
 
-<!-- LOVE STORY - DARI CHAT JADI HALAL - VERSI BERCERITA -->
+<!-- LOVE STORY - DARI CHAT JADI HALAL - VERSI BERCERITA - LANGSUNG MUNCUL -->
 <section>
 <div class="inner">
 <p class="gold-line reveal from-bottom">✦ LOVE STORY ✦</p>
 <h2 class="script reveal from-bottom">Dari Chat Jadi Halal</h2>
 <p class="reveal from-bottom">Ceritanya singkat, tapi sayangnya panjang.<br>Yuk, dibaca pelan-pelan ya...</p>
 
-<div class="love-item reveal from-left">
+<div class="love-item">
 <span class="love-emoji">💬</span>
 <b>1. Awalnya Cuma Chat Iseng...</b>
 <p>Ceritanya, semua ini berawal dari satu chat iseng. Niatnya cuma mau nanya kabar, "Eh, lagi apa?" gitu doang.<br><br>
@@ -177,8 +175,8 @@ Tapi siapa sangka, dari chat yang niatnya cuma 5 menit, malah keterusan sampe te
 Udah kaya orang pacaran, padahal belum jadian. Hmm...</p>
 </div>
 
-<div class="love-item reveal from-right">
-<span class="love-emoji">👩‍❤️‍👨</span>
+<div class="love-item">
+<span class="love-emoji">🙈</span>
 <b>2. Pas Ketemu, Kok Malah Diem?</b>
 <p>Nah, ini bagian paling lucu.<br><br>
 Di chat berani banget, gombalnya gak abis-abis. Giliran ketemu langsung... JRRENG! Dua-duanya langsung diem. Saling lirik, saling senyum, tapi grogi setengah mati.<br><br>
@@ -186,13 +184,13 @@ Yang centil di chat tiba-tiba jadi pendiem. Yang sok cool di chat tiba-tiba jadi
 Tapi dari grogi itulah, mereka tau... "Oh, ini beneran. Ini bukan cuma chat iseng lagi."</p>
 </div>
 
-<div class="love-item reveal from-left">
+<div class="love-item">
 <span class="love-emoji">💍</span>
 <b>3. Terus Gimana? Penasaran Kan?</b>
 <p>Dari yang awalnya cuma berani bilang "jangan lupa makan ya" lewat chat...<br><br>
 Sekarang udah berani bilang, "Aku mau jaga kamu seumur hidup."<br><br>
 Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati. Dan hari ini, kalian semua jadi saksi, kalo chat iseng itu ternyata bisa berakhir jadi HALAL.<br><br>
-<b>Jadi... masih percaya gak sama yang namanya jodoh bisa datang hari hal yang tak di sangka-sangka?</b></p>
+<b>Jadi... masih percaya gak sama yang namanya jodoh dari chat?</b></p>
 </div>
 
 </div>
@@ -212,7 +210,7 @@ Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati
 <p class="reveal from-bottom">Selasa, 22 Desember 2026</p>
 </section>
 
-<!-- ACARA - KOTAK PUTIH TETEP, CUMA TANGGAL DIKASIH KOTAK + TANGGAL MAJU -->
+<!-- ACARA -->
 <section>
 <div class="inner">
 <p class="gold-line reveal from-bottom">✦ WEDDING EVENT ✦</p>
@@ -356,7 +354,7 @@ window.scrollTo({top:0,behavior:'smooth'});
 initReveal();
 }
 
-// === ANIMASI SCROLL ===
+// === ANIMASI SCROLL - JADI LEBIH SENSITIF ===
 let revealStarted=false;
 function initReveal(){
 if(revealStarted) return;
@@ -368,7 +366,7 @@ e.target.classList.add('show');
 io.unobserve(e.target);
 }
 });
-},{threshold:0.2,rootMargin:"0px 0px -30px 0px"});
+},{threshold:0.05,rootMargin:"0px 0px -10px 0px"});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 }
 
