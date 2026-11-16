@@ -51,6 +51,13 @@ input,textarea,select{width:100%;padding:13px;border-radius:12px;border:1px soli
 footer{padding:25px;background:var(--navy);color:var(--pale)}
 .guestbook-note{font-size:15px;margin:8px 0 16px}
 
+/* === KOTAK TANGGAL DI DALAM CARD PUTIH - BARU === */
+.date-box{display:flex;align-items:center;justify-content:center;border:1.5px solid var(--gold);border-radius:14px;overflow:hidden;margin:14px 0}
+.date-box div{flex:1;padding:10px 4px;font-size:16px;color:var(--navy)}
+.date-box div:nth-child(2){border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold);background:#FDF6E8}
+.date-num{font-family:'Playfair Display',serif;font-size:32px;line-height:1;display:block;color:var(--navy)}
+.date-month{font-size:12px;letter-spacing:1px}
+
 /* === ANIMASI MUNCUL PAS DI-SCROLL === */
 .reveal{opacity:0;visibility:hidden;transform:translateY(50px) scale(.92);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.3,1.2);will-change:opacity,transform}
 .reveal.from-left{transform:translateX(-80px) scale(.92)}
@@ -134,7 +141,6 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 <section>
 <div class="inner">
 <p class="gold-line reveal from-bottom">✦ BRIDE & GROOM ✦</p>
-<!-- AIDA - BRIDE DARI KIRI, GAMBAR DULU BARU NAMA -->
 <div class="card">
 <img class="couple-img reveal from-zoom" src="https://i.ibb.co.com/gLYk2JBK/IMG-6114.jpg" alt="Aida Lestari">
 <h2 class="script reveal from-left" style="transition-delay:.5s">Aida Lestari</h2>
@@ -142,7 +148,6 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 <p class="reveal from-left" style="transition-delay:.85s"><b>Bapak Wawan & Ibu Manah</b></p>
 </div>
 <h2 class="script reveal from-zoom" style="font-size:42px">&</h2>
-<!-- WILDAN - GROOM DARI KANAN, GAMBAR DULU BARU NAMA -->
 <div class="card">
 <img class="couple-img reveal from-zoom" src="https://i.ibb.co.com/prQFQ2qD/IMG-6113.jpg" alt="Wildan Sapari Ilmi">
 <h2 class="script reveal from-right" style="transition-delay:.5s">Wildan Sapari Ilmi</h2>
@@ -166,19 +171,27 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 <p class="reveal from-bottom">Selasa, 22 Desember 2026</p>
 </section>
 
-<!-- ACARA -->
+<!-- ACARA - KOTAK PUTIH TETEP, CUMA TANGGAL DIKASIH KOTAK + TANGGAL MAJU -->
 <section>
 <div class="inner">
 <p class="gold-line reveal from-bottom">✦ WEDDING EVENT ✦</p>
 <h2 class="script reveal from-bottom">Rangkaian Acara</h2>
 <div class="card reveal from-left">
 <h2 class="script">Akad Nikah</h2>
-<p>Selasa, 22 Desember 2026</p>
+<div class="date-box">
+  <div>Selasa</div>
+  <div><span class="date-num" data-target="22">1</span><span class="date-month">Desember</span></div>
+  <div>2026</div>
+</div>
 <p class="event-time">08.00 WIB</p>
 </div>
 <div class="card reveal from-right">
 <h2 class="script">Resepsi</h2>
-<p>Selasa, 22 Desember 2026</p>
+<div class="date-box">
+  <div>Selasa</div>
+  <div><span class="date-num" data-target="22">1</span><span class="date-month">Desember</span></div>
+  <div>2026</div>
+</div>
 <p class="event-time">10.00 WIB</p>
 </div>
 <div class="card reveal from-bottom">
@@ -317,6 +330,26 @@ io.unobserve(e.target);
 },{threshold:0.2,rootMargin:"0px 0px -30px 0px"});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 }
+
+// TANGGAL MAJU 1 SAMPE 22 PAS DI-SCROLL
+function animateDate(el){
+  let target = parseInt(el.dataset.target);
+  let cur = 1;
+  let timer = setInterval(()=>{
+    el.textContent = cur;
+    if(cur >= target) clearInterval(timer);
+    cur++;
+  }, 60);
+}
+const dateObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      animateDate(e.target);
+      dateObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.date-num').forEach(el=>dateObserver.observe(el));
 
 // MUSIK
 function toggleMusic(){
