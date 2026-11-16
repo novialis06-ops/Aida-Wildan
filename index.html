@@ -56,13 +56,13 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 .date-num{font-family:'Playfair Display',serif;font-size:32px;line-height:1;display:block;color:var(--navy)}
 .date-month{font-size:12px;letter-spacing:1px}
 
-/* === LOVE STORY - MUNCUL DARI PINGGIR === */
+/* === LOVE STORY - MUNCUL DARI PINGGIR, TAPI DIJAMIN MUNCUL === */
 .love-item{background:#FFFDF8;border:1.5px solid var(--gold);border-radius:16px;padding:18px;margin:16px 0;text-align:left;will-change:transform,opacity}
 .love-item b{color:var(--navy);font-size:19px;display:block;margin-bottom:4px}
 .love-emoji{font-size:28px;display:block;margin-bottom:6px}
-.love-from-left{opacity:0;transform:translateX(-110%) rotate(-2deg);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.9,.3,1.1)}
-.love-from-right{opacity:0;transform:translateX(110%) rotate(2deg);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.9,.3,1.1)}
-.love-from-left.show-love,.love-from-right.show-love{opacity:1;transform:translateX(0) rotate(0)}
+.love-from-left{opacity:0;transform:translateX(-60px);transition:opacity .7s ease,transform .7s ease}
+.love-from-right{opacity:0;transform:translateX(60px);transition:opacity .7s ease,transform .7s ease}
+.love-from-left.show-love,.love-from-right.show-love{opacity:1 !important;transform:translateX(0) !important}
 
 /* === ANIMASI MUNCUL PAS DI-SCROLL === */
 .reveal{opacity:0;visibility:hidden;transform:translateY(50px) scale(.92);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.3,1.2);will-change:opacity,transform}
@@ -163,7 +163,7 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 </div>
 </section>
 
-<!-- LOVE STORY - MUNCUL DARI PINGGIR -->
+<!-- LOVE STORY - MUNCUL DARI PINGGIR + DIJAMIN MUNCUL -->
 <section>
 <div class="inner">
 <p class="gold-line reveal from-bottom">✦ LOVE STORY ✦</p>
@@ -370,25 +370,41 @@ e.target.classList.add('show');
 io.unobserve(e.target);
 }
 });
-},{threshold:0.1,rootMargin:"0px 0px -20px 0px"});
+},{threshold:0.05,rootMargin:"0px 0px 0px 0px"});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// JAGA-JAGA: kalau sensor gagal, paksa munculin semua reveal setelah 2 detik
+setTimeout(()=>{
+document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'));
+},2500);
 }
 
-// === ANIMASI LOVE STORY DARI PINGGIR ===
+// === ANIMASI LOVE STORY DARI PINGGIR - VERSI ANTI GAGAL ===
 let loveStarted=false;
 function initLove(){
 if(loveStarted) return;
 loveStarted=true;
-const io2=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{
-if(e.isIntersecting){
-e.target.classList.add('show-love');
-io2.unobserve(e.target);
+const loveItems=document.querySelectorAll('.love-from-left, .love-from-right');
+function cekLove(){
+loveItems.forEach(el=>{
+const r=el.getBoundingClientRect();
+if(r.top < window.innerHeight - 30 && r.bottom > 0){
+el.classList.add('show-love');
 }
 });
-},{threshold:0.15,rootMargin:"0px 0px -30px 0px"});
-document.querySelectorAll('.love-from-left, .love-from-right').forEach(el=>io2.observe(el));
 }
+window.addEventListener('scroll',cekLove,{passive:true});
+cekLove();
+setInterval(cekLove,500);
+// JAGA-JAGA PALING PENTING: kalau sampe 1.5 detik masih belum muncul, PAKSA MUNCUL SEMUA!
+setTimeout(()=>{
+loveItems.forEach(el=>el.classList.add('show-love'));
+},1500);
+}
+// JALANKAN JUGA WALAU TANPA PENCET BUKA (biar di Vercel langsung jalan)
+document.addEventListener('DOMContentLoaded',function(){
+initReveal();
+initLove();
+});
 
 // TANGGAL MAJU 1 SAMPE 22 PAS DI-SCROLL
 function animateDate(el){
