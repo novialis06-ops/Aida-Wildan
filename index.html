@@ -55,13 +55,10 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 .date-box div:nth-child(2){border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold);background:#FDF6E8}
 .date-num{font-family:'Playfair Display',serif;font-size:32px;line-height:1;display:block;color:var(--navy)}
 .date-month{font-size:12px;letter-spacing:1px}
-
-/* === LOVE STORY - PAKE ANIMASI YANG SAMA KAYA YANG LAIN, BIAR PASTI JALAN === */
+.nickname{font-family:'Great Vibes',cursive;font-size:32px;color:var(--gold);display:block;margin:2px 0 6px;line-height:1}
 .love-item{background:#FFFDF8;border:1.5px solid var(--gold);border-radius:16px;padding:18px;margin:16px 0;text-align:left}
 .love-item b{color:var(--navy);font-size:19px;display:block;margin-bottom:4px}
 .love-emoji{font-size:28px;display:block;margin-bottom:6px}
-
-/* === ANIMASI MUNCUL PAS DI-SCROLL - ASLI, TANPA PAKSAAN === */
 .reveal{opacity:0;visibility:hidden;transform:translateY(50px) scale(.92);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.3,1.2);will-change:opacity,transform}
 .reveal.from-left{transform:translateX(-80px) scale(.92)}
 .reveal.from-right{transform:translateX(80px) scale(.92)}
@@ -69,8 +66,6 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 .reveal.from-top{transform:translateY(-70px) scale(.92)}
 .reveal.from-zoom{transform:scale(.7);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.9,.3,1.4)}
 .reveal.show{opacity:1;visibility:visible;transform:translateX(0) translateY(0) scale(1)}
-
-/* === FIX UCAPAN & DOA === */
 #HCB_comment_box{margin-top:12px;text-align:left;font-family:'Cormorant Garamond',serif !important;font-size:16px;width:100% !important;max-width:100% !important;overflow:hidden !important}
 #HCB_comment_box *{box-sizing:border-box !important;max-width:100% !important}
 #HCB_comment_box a{color:var(--navy)}
@@ -80,7 +75,6 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 #HCB_comment_box .btn,#HCB_comment_box input[type="submit"],#HCB_comment_box button[type="submit"],#HCB_comment_box #hcb_submit{width:100% !important;display:block !important;background:var(--navy) !important;color:var(--pale) !important;border:1px solid var(--gold) !important;border-radius:30px !important;padding:13px 10px !important;font-size:15px !important;font-weight:bold !important;white-space:normal !important;line-height:1.4 !important;float:none !important;margin:10px 0 0 !important}
 #HCB_comment_box h3,#HCB_comment_box .hcb-comment-header,#HCB_comment_box #hcb_form_add_image,#HCB_comment_box .hcb-image-btn,#HCB_comment_box input[type="file"],#HCB_comment_box .btn-secondary,#HCB_comment_box .hcb-icon,#HCB_comment_box .home-desc,#HCB_comment_box a[href*="htmlcommentbox.com"]{display:none !important}
 #HCB_comment_box .hcb-comment .hcb-comment-tb,#HCB_comment_box .hcb-comment-footer,#HCB_comment_box .comment-actions{display:none !important}
-
 @media(max-height:700px){.cover{justify-content:flex-start}.frame{margin:8px auto}.cover .couple-img{height:30vh;max-height:220px}.names{font-size:23px}.cover .btn{margin-top:9px;padding:11px 22px}}
 @media(max-width:360px){.count{max-width:320px;gap:6px}.count div{padding:10px 1px}.count b{font-size:21px}.gallery img{height:155px}}
 </style>
@@ -101,6 +95,7 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 <p style="letter-spacing:4px;font-size:12px">THE WEDDING OF</p>
 <img src="https://i.ibb.co.com/zV43RW4r/IMG-6110.jpg" class="couple-img" alt="Aida dan Wildan">
 <div class="names">AIDA & WILDAN</div>
+<p style="font-family:'Great Vibes',cursive;font-size:26px;color:#C9A96A;margin-top:2px">Idut & Idute</p>
 <p>Selasa, 22 Desember 2026<br>Kp. Darmamukti - Tasikmalaya</p>
 <div style="background:#0F2238;color:white;padding:12px;border-radius:12px;margin-top:12px">
 <p style="font-size:13px">Kepada Yth. Bapak/Ibu/Saudara/i</p>
@@ -119,6 +114,7 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 <div class="arch">
 <p class="gold-line reveal from-top">✦ THE WEDDING OF ✦</p>
 <h1 class="script reveal from-top" style="transition-delay:.15s">Aida & Wildan</h1>
+<p class="nickname reveal from-top" style="transition-delay:.25s">Idut & Idute</p>
 <p class="reveal from-top" style="transition-delay:.3s">Dengan memohon rahmat dan ridho Allah SWT,</p>
 <p class="reveal from-top" style="transition-delay:.45s">kami bermaksud menyelenggarakan pernikahan kami.</p>
 <img class="couple-img reveal from-zoom" style="transition-delay:.6s" src="https://i.ibb.co.com/SwC5hcWY/IMG-6111.jpg" alt="Aida dan Wildan">
@@ -140,13 +136,14 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 </div>
 </section>
 
-<!-- MEMPELAI -->
+<!-- MEMPELAI + NAMA PANGGILAN -->
 <section>
 <div class="inner">
 <p class="gold-line reveal from-bottom">✦ BRIDE & GROOM ✦</p>
 <div class="card">
 <img class="couple-img reveal from-zoom" src="https://i.ibb.co.com/gLYk2JBK/IMG-6114.jpg" alt="Aida Lestari">
 <h2 class="script reveal from-left" style="transition-delay:.5s">Aida Lestari</h2>
+<span class="nickname reveal from-left" style="transition-delay:.6s">"Idut"</span>
 <p class="reveal from-left" style="transition-delay:.7s">Putri dari</p>
 <p class="reveal from-left" style="transition-delay:.85s"><b>Bapak Wawan & Ibu Manah</b></p>
 </div>
@@ -154,24 +151,25 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 <div class="card">
 <img class="couple-img reveal from-zoom" src="https://i.ibb.co.com/prQFQ2qD/IMG-6113.jpg" alt="Wildan Sapari Ilmi">
 <h2 class="script reveal from-right" style="transition-delay:.5s">Wildan Sapari Ilmi</h2>
+<span class="nickname reveal from-right" style="transition-delay:.6s">"Idute"</span>
 <p class="reveal from-right" style="transition-delay:.7s">Putra dari</p>
 <p class="reveal from-right" style="transition-delay:.85s"><b>Bapak Ejeb (Alm) & Ibu Cucu</b></p>
 </div>
 </div>
 </section>
 
-<!-- LOVE STORY - PAKE REVEAL YANG SAMA, DARI PINGGIR -->
+<!-- LOVE STORY -->
 <section>
 <div class="inner">
 <p class="gold-line reveal from-bottom">✦ LOVE STORY ✦</p>
 <h2 class="script reveal from-bottom">Dari Chat Jadi Halal</h2>
-<p class="reveal from-bottom">Ceritanya singkat, tapi sayangnya panjang.<br>Yuk, dibaca pelan-pelan ya...</p>
+<p class="reveal from-bottom">Ceritanya Idut & Idute, singkat tapi sayangnya panjang.<br>Yuk, dibaca pelan-pelan ya...</p>
 
 <div class="love-item reveal from-left">
 <span class="love-emoji">💬</span>
 <b>1. Awalnya Cuma Chat Iseng...</b>
 <p>Ceritanya, semua ini berawal dari satu chat iseng. Niatnya cuma mau nanya kabar, "Eh, lagi apa?" gitu doang.<br><br>
-Tapi siapa sangka, dari chat yang niatnya cuma 5 menit, malah keterusan sampe tengah malem. Tiap hari chat, tiap hari nungguin balesan. Yang satu centilnya kebangetan di chat, yang satu sok cool padahal tiap HP bunyi langsung senyum-senyum sendiri.<br><br>
+Tapi siapa sangka, dari chat yang niatnya cuma 5 menit, malah keterusan sampe tengah malem. Tiap hari chat, tiap hari nungguin balesan. Idut centilnya kebangetan di chat, Idute sok cool padahal tiap HP bunyi langsung senyum-senyum sendiri.<br><br>
 Udah kaya orang pacaran, padahal belum jadian. Hmm...</p>
 </div>
 
@@ -180,7 +178,7 @@ Udah kaya orang pacaran, padahal belum jadian. Hmm...</p>
 <b>2. Pas Ketemu, Kok Malah Diem?</b>
 <p>Nah, ini bagian paling lucu.<br><br>
 Di chat berani banget, gombalnya gak abis-abis. Giliran ketemu langsung... JRRENG! Dua-duanya langsung diem. Saling lirik, saling senyum, tapi grogi setengah mati.<br><br>
-Yang centil di chat tiba-tiba jadi pendiem. Yang sok cool di chat tiba-tiba jadi salting. Padahal di dalam hati, deg-degannya udah kaya mau ujian nasional.<br><br>
+Idut yang centil di chat tiba-tiba jadi pendiem. Idute yang sok cool di chat tiba-tiba jadi salting. Padahal di dalam hati, deg-degannya udah kaya mau ujian nasional.<br><br>
 Tapi dari grogi itulah, mereka tau... "Oh, ini beneran. Ini bukan cuma chat iseng lagi."</p>
 </div>
 
@@ -188,8 +186,8 @@ Tapi dari grogi itulah, mereka tau... "Oh, ini beneran. Ini bukan cuma chat isen
 <span class="love-emoji">💍</span>
 <b>3. Terus Gimana? Penasaran Kan?</b>
 <p>Dari yang awalnya cuma berani bilang "jangan lupa makan ya" lewat chat...<br><br>
-Sekarang udah berani bilang, "Aku mau jaga kamu seumur hidup."<br><br>
-Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati. Dan hari ini, kalian semua jadi saksi, kalo chat iseng itu ternyata bisa berakhir jadi HALAL.<br><br>
+Sekarang Idute udah berani bilang, "Idut, aku mau jaga kamu seumur hidup."<br><br>
+Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati. Dan hari ini, kalian semua jadi saksi, kalo chat iseng Idut & Idute itu ternyata bisa berakhir jadi HALAL.<br><br>
 <b>Jadi... masih percaya gak sama yang namanya jodoh dari chat?</b></p>
 </div>
 
@@ -200,7 +198,7 @@ Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati
 <section class="navy">
 <p class="gold-line reveal from-bottom">✦ SAVE THE DATE ✦</p>
 <h2 class="script reveal from-bottom">Counting Down</h2>
-<p class="reveal from-bottom">Menuju hari bahagia kami</p>
+<p class="reveal from-bottom">Menuju hari bahagia Idut & Idute</p>
 <div class="count reveal from-zoom">
 <div><b id="days">00</b><span>Hari</span></div>
 <div><b id="hours">00</b><span>Jam</span></div>
@@ -268,13 +266,13 @@ Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati
 <p>Doa restu Anda merupakan hadiah terindah bagi kami. Namun apabila ingin memberikan tanda kasih, dapat melalui:</p>
 <div class="card reveal from-left">
 <h3>DANA</h3>
-<p>Aida</p>
+<p>Idut - Aida</p>
 <p class="gift-number">0822 1824 3280</p>
 <button class="btn" onclick="salin('082218243280')">Salin Nomor</button>
 </div>
 <div class="card reveal from-right">
 <h3>SeaBank</h3>
-<p>Wildan</p>
+<p>Idute - Wildan</p>
 <p class="gift-number">9014 5998 0109</p>
 <button class="btn" onclick="salin('901459980109')">Salin Rekening</button>
 </div>
@@ -312,7 +310,7 @@ Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati
 <div class="card reveal from-bottom">
 <p class="gold-line">✦ WEDDING GUESTBOOK ✦</p>
 <h2 class="script">Ucapan & Doa</h2>
-<p class="guestbook-note">Tuliskan doa dan ucapan terbaik untuk Aida & Wildan. Ucapan yang dikirim dapat dibaca oleh tamu lainnya.</p>
+<p class="guestbook-note">Tuliskan doa dan ucapan terbaik untuk Idut & Idute. Ucapan yang dikirim dapat dibaca oleh tamu lainnya.</p>
 <div id="HCB_comment_box">
 <a href="https://www.htmlcommentbox.com">Comment Box</a> sedang memuat ucapan...
 </div>
@@ -328,8 +326,8 @@ Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati
 <p class="gold-line reveal from-top" style="transition-delay:.4s">✦ ✦ ✦</p>
 <h2 class="script reveal from-top" style="transition-delay:.55s">Terima Kasih</h2>
 <p class="reveal from-top" style="transition-delay:.7s">Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
-<h2 class="script reveal from-top" style="margin-top:20px;transition-delay:.85s">Aida & Wildan</h2>
-<p class="reveal from-top" style="transition-delay:1s">22 Desember 2026</p>
+<h2 class="script reveal from-top" style="margin-top:20px;transition-delay:.85s">Idut & Idute</h2>
+<p class="reveal from-top" style="transition-delay:1s">Aida & Wildan - 22 Desember 2026</p>
 </div>
 </div>
 </section>
@@ -337,13 +335,12 @@ Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati
 </main>
 
 <footer>
-<p>AIDA & WILDAN</p>
-<p>22 . 12 . 2026</p>
+<p>IDUT & IDUTE</p>
+<p>AIDA & WILDAN - 22 . 12 . 2026</p>
 <p style="font-size:13px;margin-top:8px">Made with love ♡</p>
 </footer>
 
 <script>
-// BUKA UNDANGAN - ANIMASI BARU JALAN DI SINI, BUKAN SEBELUMNYA!
 const audio=document.getElementById('lagu');
 function buka(){
 document.getElementById('cover').classList.add('hide');
@@ -353,8 +350,6 @@ audio.play().then(()=>{document.getElementById('musicBtn').textContent='♫'}).c
 window.scrollTo({top:0,behavior:'smooth'});
 initReveal();
 }
-
-// === ANIMASI SCROLL - SATU SISTEM AJA, BIAR GAK BENTROK ===
 let revealStarted=false;
 function initReveal(){
 if(revealStarted) return;
@@ -369,8 +364,6 @@ io.unobserve(e.target);
 },{threshold:0.1,rootMargin:"0px 0px -20px 0px"});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 }
-
-// TANGGAL MAJU 1 SAMPE 22 PAS DI-SCROLL
 function animateDate(el){
   let target = parseInt(el.dataset.target);
   let cur = 1;
@@ -389,8 +382,6 @@ const dateObserver = new IntersectionObserver((entries)=>{
   });
 },{threshold:0.5});
 document.querySelectorAll('.date-num').forEach(el=>dateObserver.observe(el));
-
-// MUSIK
 function toggleMusic(){
 if(!audio)return;
 if(audio.paused){
@@ -400,8 +391,6 @@ audio.pause();
 document.getElementById('musicBtn').textContent='♪';
 }
 }
-
-// NAMA TAMU
 const params=new URLSearchParams(window.location.search);
 const namaTamu=params.get('to');
 if(namaTamu){
@@ -409,8 +398,6 @@ const namaUndangan=namaTamu.replace(/\+/g,' ');
 document.getElementById('namaTamu').textContent=namaUndangan;
 document.getElementById('nama').value=namaUndangan;
 }
-
-// COUNTDOWN
 const tanggalAcara=new Date('2026-12-22T08:00:00+07:00').getTime();
 function updateCountdown(){
 const jarak=tanggalAcara-Date.now();
@@ -426,8 +413,6 @@ document.getElementById('seconds').textContent=Math.floor((jarak%60000)/1000);
 }
 updateCountdown();
 setInterval(updateCountdown,1000);
-
-// RSVP
 let statusHadir='Hadir';
 function pilihHadir(status){
 statusHadir=status;
@@ -449,8 +434,6 @@ const teks=
 'Jumlah tamu: '+jumlah;
 window.open('https://wa.me/6282218243280?text='+encodeURIComponent(teks),'_blank');
 }
-
-// SALIN NOMOR
 function salin(teks){
 if(navigator.clipboard&&window.isSecureContext){
 navigator.clipboard.writeText(teks)
@@ -475,8 +458,6 @@ alert('Silakan salin nomor ini: '+teks);
 }
 document.body.removeChild(area);
 }
-
-// ANIMASI BUNGA DAN SALJU
 const bunga=['❄️','🤍'];
 const wadahHujan=document.getElementById('hujan');
 function buatBunga(){
@@ -493,8 +474,6 @@ for(let i=0;i<10;i++){
 setTimeout(buatBunga,i*350);
 }
 setInterval(buatBunga,1200);
-
-// AUTO TERJEMAHIN UCAPAN JADI BAHASA INDONESIA + HAPUS JUDUL DOBEL
 setInterval(function(){
   var box=document.getElementById('HCB_comment_box');
   if(!box) return;
@@ -511,7 +490,6 @@ setInterval(function(){
 },1000);
 </script>
 
-<!-- HTML COMMENT BOX -->
 <script>
 window.hcb_user=window.hcb_user||{};
 hcb_user.PAGE='aida-wildan-22122026-baru';
