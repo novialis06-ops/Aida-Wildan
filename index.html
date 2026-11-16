@@ -58,6 +58,11 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 .date-num{font-family:'Playfair Display',serif;font-size:32px;line-height:1;display:block;color:var(--navy)}
 .date-month{font-size:12px;letter-spacing:1px}
 
+/* === LOVE STORY - DARI CHAT JADI HALAL === */
+.love-item{background:#FFFDF8;border:1.5px solid var(--gold);border-radius:16px;padding:18px;margin:16px 0;position:relative;text-align:left}
+.love-item b{color:var(--navy);font-size:19px;display:block;margin-bottom:4px}
+.love-emoji{font-size:28px;display:block;margin-bottom:6px}
+
 /* === ANIMASI MUNCUL PAS DI-SCROLL === */
 .reveal{opacity:0;visibility:hidden;transform:translateY(50px) scale(.92);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.3,1.2);will-change:opacity,transform}
 .reveal.from-left{transform:translateX(-80px) scale(.92)}
@@ -110,7 +115,7 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 
 <main id="undangan">
 
-<!-- PEMBUKA - 1. TEKS DARI ATAS, PAS DIBUKA TEKS BELUM ADA BARU JATUH DARI ATAS -->
+<!-- PEMBUKA -->
 <section>
 <div class="inner">
 <div class="arch">
@@ -137,7 +142,7 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 </div>
 </section>
 
-<!-- MEMPELAI - 2. GAMBAR DULU, BARU NAMA NYUSUL -->
+<!-- MEMPELAI -->
 <section>
 <div class="inner">
 <p class="gold-line reveal from-bottom">✦ BRIDE & GROOM ✦</p>
@@ -157,7 +162,43 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 </div>
 </section>
 
-<!-- COUNTDOWN - UDAH DITENGAHIN, GAK MEPET PINGGIR LAGI -->
+<!-- LOVE STORY - DARI CHAT JADI HALAL - VERSI BERCERITA -->
+<section>
+<div class="inner">
+<p class="gold-line reveal from-bottom">✦ LOVE STORY ✦</p>
+<h2 class="script reveal from-bottom">Dari Chat Jadi Halal</h2>
+<p class="reveal from-bottom">Ceritanya singkat, tapi sayangnya panjang.<br>Yuk, dibaca pelan-pelan ya...</p>
+
+<div class="love-item reveal from-left">
+<span class="love-emoji">💬</span>
+<b>1. Awalnya Cuma Chat Iseng...</b>
+<p>Ceritanya, semua ini berawal dari satu chat iseng. Niatnya cuma mau nanya kabar, "Eh, lagi apa?" gitu doang.<br><br>
+Tapi siapa sangka, dari chat yang niatnya cuma 5 menit, malah keterusan sampe tengah malem. Tiap hari chat, tiap hari nungguin balesan. Yang satu centilnya kebangetan di chat, yang satu sok cool padahal tiap HP bunyi langsung senyum-senyum sendiri.<br><br>
+Udah kaya orang pacaran, padahal belum jadian. Hmm...</p>
+</div>
+
+<div class="love-item reveal from-right">
+<span class="love-emoji">🙈</span>
+<b>2. Pas Ketemu, Kok Malah Diem?</b>
+<p>Nah, ini bagian paling lucu.<br><br>
+Di chat berani banget, gombalnya gak abis-abis. Giliran ketemu langsung... JRRENG! Dua-duanya langsung diem. Saling lirik, saling senyum, tapi grogi setengah mati.<br><br>
+Yang centil di chat tiba-tiba jadi pendiem. Yang sok cool di chat tiba-tiba jadi salting. Padahal di dalam hati, deg-degannya udah kaya mau ujian nasional.<br><br>
+Tapi dari grogi itulah, mereka tau... "Oh, ini beneran. Ini bukan cuma chat iseng lagi."</p>
+</div>
+
+<div class="love-item reveal from-left">
+<span class="love-emoji">💍</span>
+<b>3. Terus Gimana? Penasaran Kan?</b>
+<p>Dari yang awalnya cuma berani bilang "jangan lupa makan ya" lewat chat...<br><br>
+Sekarang udah berani bilang, "Aku mau jaga kamu seumur hidup."<br><br>
+Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati. Dan hari ini, kalian semua jadi saksi, kalo chat iseng itu ternyata bisa berakhir jadi HALAL.<br><br>
+<b>Jadi... masih percaya gak sama yang namanya jodoh dari chat?</b></p>
+</div>
+
+</div>
+</section>
+
+<!-- COUNTDOWN - PEMISAH NAVY -->
 <section class="navy">
 <p class="gold-line reveal from-bottom">✦ SAVE THE DATE ✦</p>
 <h2 class="script reveal from-bottom">Counting Down</h2>
@@ -315,7 +356,7 @@ window.scrollTo({top:0,behavior:'smooth'});
 initReveal();
 }
 
-// === ANIMASI SCROLL - MUNCUL PAS DI-SLIDE, JANGAN SEBELUM ===
+// === ANIMASI SCROLL ===
 let revealStarted=false;
 function initReveal(){
 if(revealStarted) return;
@@ -472,7 +513,7 @@ setInterval(function(){
 },1000);
 </script>
 
-<!-- HTML COMMENT BOX - SUDAH DIKOSONGIN, PAGE BARU -->
+<!-- HTML COMMENT BOX -->
 <script>
 window.hcb_user=window.hcb_user||{};
 hcb_user.PAGE='aida-wildan-22122026-baru';
