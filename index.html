@@ -28,11 +28,11 @@ section{background:var(--cream)}
 .arabic{font-family:'Amiri',serif;font-size:32px;color:var(--gold);direction:rtl;unicode-bidi:isolate;letter-spacing:0;line-height:1.8;margin:10px 0 18px}
 .card{background:white;border:1.5px solid var(--gold);border-radius:20px;padding:24px 16px;margin:18px 0;box-shadow:0 8px 25px rgba(0,0,0,.08)}
 .arch{background:#fff;border:3px solid var(--gold);border-radius:200px 200px 24px 24px;padding:38px 20px;overflow:hidden}
-.navy{background:var(--navy);color:white;padding:45px 18px}
+.navy{background:var(--navy);color:white;padding:45px 12px}
 .navy h2{color:var(--pale)}
-.count{display:flex;gap:7px;justify-content:center;margin:20px 0;flex-wrap:wrap}
-.count div{background:var(--pale);color:var(--navy);border-radius:14px;padding:12px 7px;min-width:65px;border:1px solid var(--gold)}
-.count b{font-size:25px;display:block;font-family:'Playfair Display',serif}
+.count{display:flex;gap:8px;justify-content:center;margin:20px auto;max-width:360px;padding:0 6px}
+.count div{flex:1;min-width:0;background:var(--pale);color:var(--navy);border-radius:14px;padding:12px 2px;border:1px solid var(--gold)}
+.count b{font-size:23px;display:block;font-family:'Playfair Display',serif}
 .event-time{font-size:24px;color:var(--gold);font-weight:bold}
 .map-link{display:inline-block;background:var(--navy);color:var(--pale);padding:12px 22px;border-radius:25px;text-decoration:none;margin-top:15px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
@@ -51,8 +51,8 @@ input,textarea,select{width:100%;padding:13px;border-radius:12px;border:1px soli
 footer{padding:25px;background:var(--navy);color:var(--pale)}
 .guestbook-note{font-size:15px;margin:8px 0 16px}
 
-/* === KOTAK TANGGAL DI DALAM CARD PUTIH - BARU === */
-.date-box{display:flex;align-items:center;justify-content:center;border:1.5px solid var(--gold);border-radius:14px;overflow:hidden;margin:14px 0}
+/* === KOTAK TANGGAL DI DALAM CARD PUTIH === */
+.date-box{display:flex;align-items:center;justify-content:center;border:1.5px solid var(--gold);border-radius:14px;overflow:hidden;margin:14px 6px}
 .date-box div{flex:1;padding:10px 4px;font-size:16px;color:var(--navy)}
 .date-box div:nth-child(2){border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold);background:#FDF6E8}
 .date-num{font-family:'Playfair Display',serif;font-size:32px;line-height:1;display:block;color:var(--navy)}
@@ -79,7 +79,7 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 #HCB_comment_box .hcb-comment .hcb-comment-tb,#HCB_comment_box .hcb-comment-footer,#HCB_comment_box .comment-actions{display:none !important}
 
 @media(max-height:700px){.cover{justify-content:flex-start}.frame{margin:8px auto}.cover .couple-img{height:30vh;max-height:220px}.names{font-size:23px}.cover .btn{margin-top:9px;padding:11px 22px}}
-@media(max-width:360px){.count div{min-width:57px;padding:10px 4px}.gallery img{height:155px}}
+@media(max-width:360px){.count{max-width:320px;gap:6px}.count div{padding:10px 1px}.count b{font-size:21px}.gallery img{height:155px}}
 </style>
 </head>
 
@@ -157,7 +157,7 @@ footer{padding:25px;background:var(--navy);color:var(--pale)}
 </div>
 </section>
 
-<!-- COUNTDOWN -->
+<!-- COUNTDOWN - UDAH DITENGAHIN, GAK MEPET PINGGIR LAGI -->
 <section class="navy">
 <p class="gold-line reveal from-bottom">✦ SAVE THE DATE ✦</p>
 <h2 class="script reveal from-bottom">Counting Down</h2>
