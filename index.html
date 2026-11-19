@@ -483,3 +483,8 @@ document.getElementsByTagName('head')[0].appendChild(s);
 </script>
 </body>
 </html>
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('error', () => {
+    if(img.src.includes('.jpg')) img.src = img.src.replace('.jpg','.JPG');
+  });
+});
