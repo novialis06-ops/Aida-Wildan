@@ -1,528 +1,485 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aida & Wildan - Wedding Invitation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #fdf8f1;
-      color: #4a3b32;
-    }
-    img {
-      display: block;
-      width: 100%;
-    }
-    .script {
-      font-family: 'Great Vibes', cursive;
-    }
-    .serif {
-      font-family: 'Playfair Display', serif;
-    }
-    .wrap {
-      max-width: 520px;
-      margin: auto;
-      overflow: hidden;
-      background: #fdf8f1;
-    }
-    section {
-      padding: 48px 22px;
-      text-align: center;
-    }
-    .cover {
-      padding: 0;
-      position: relative;
-    }
-    .cover img {
-      height: 100vh;
-      object-fit: cover;
-    }
-    .cover-ov {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.05) 65%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 0 20px 70px;
-      color: #fff;
-    }
-    .cover-ov .small {
-      letter-spacing: 4px;
-      font-size: 11px;
-    }
-    .cover-ov h1 {
-      font-size: 58px;
-      line-height: 1;
-      margin: 12px 0 8px;
-    }
-    .btn {
-      background: #8a5a3b;
-      color: #fff;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-    .btn2 {
-      background: #fff;
-      color: #8a5a3b;
-      border: 1px solid #8a5a3b;
-    }
-    .card {
-      background: #fff;
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: 0 12px 30px rgba(0,0,0,.07);
-      margin: 16px 0;
-    }
-    .card img {
-      border-radius: 16px;
-      object-fit: cover;
-    }
-    .small {
-      font-size: 13px;
-      line-height: 1.8;
-      color: #7a6a5f;
-    }
-    h2 {
-      font-size: 30px;
-    }
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: #d9b896;
-      margin: 14px auto;
-    }
-    .couple {
-      display: flex;
-      gap: 12px;
-    }
-    .couple .card {
-      flex: 1;
-      padding: 16px;
-    }
-    .couple img {
-      height: 260px;
-    }
-    .couple h3 {
-      font-size: 30px;
-      margin-top: 10px;
-    }
-    .datebox {
-      background: #8a5a3b;
-      color: #fff;
-      border-radius: 22px;
-      padding: 26px 16px;
-    }
-    .datebox h3 {
-      font-size: 38px;
-    }
-    .count {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 18px;
-    }
-    .count div {
-      background: rgba(255,255,255,.18);
-      border-radius: 14px;
-      padding: 10px 0;
-      width: 68px;
-      font-size: 11px;
-    }
-    .count b {
-      font-size: 24px;
-      display: block;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 18px;
-    }
-    .gallery img {
-      height: 190px;
-      object-fit: cover;
-      border-radius: 16px;
-    }
-    .gallery img.wide {
-      grid-column: span 2;
-      height: 250px;
-    }
-    .timeline {
-      text-align: left;
-      margin-top: 18px;
-    }
-    .timeline div {
-      display: flex;
-      gap: 14px;
-      padding: 14px 0;
-      border-bottom: 1px dashed #e8d5c3;
-    }
-    .timeline b {
-      min-width: 90px;
-      color: #8a5a3b;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #e8d5c3;
-      border-radius: 14px;
-      margin: 8px 0;
-      font-family: 'Poppins';
-      font-size: 14px;
-      background: #fffdfb;
-    }
-    .gift {
-      background: #fff7ee;
-      border: 1.5px dashed #c9a07a;
-      border-radius: 18px;
-      padding: 20px;
-      margin-top: 16px;
-    }
-    .penutup img {
-      height: 460px;
-      object-fit: cover;
-      border-radius: 22px;
-    }
-    footer {
-      padding: 30px 20px 70px;
-      text-align: center;
-    }
-    .story-card {
-      text-align: left;
-      padding: 20px;
-    }
-    .story-card b {
-      color: #8a5a3b;
-    }
-    .dress {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 14px;
-    }
-    .dot {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      box-shadow: 0 3px 10px rgba(0,0,0,.15);
-    }
-    .music-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: #8a5a3b;
-      color: #fff;
-      border: none;
-      font-size: 20px;
-      z-index: 999;
-      box-shadow: 0 5px 15px rgba(0,0,0,.3);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Idut & Idute | 22.12.2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FDF6E8;--navy:#0F2238;--gold:#C9A96A;--pale:#FFDFA8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);font-family:'Cormorant Garamond',serif;color:#2C3A4A;text-align:center;overflow-x:hidden}
+p{line-height:1.65}
+h2,h3{font-family:'Playfair Display',serif}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+section{background:var(--cream)}
+.inner{max-width:480px;margin:auto;padding:38px 18px;overflow:hidden}
+.cover{position:fixed;inset:0;z-index:100;background:linear-gradient(rgba(255,248,235,.25),rgba(255,248,235,.4)),url('cover.JPG') center/cover;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;overflow-y:auto;transition:.9s}
+.cover.hide{transform:translateY(-100%);opacity:0;pointer-events:none}
+.frame{border:2px solid var(--gold);outline:1px solid var(--gold);outline-offset:5px;padding:8px 10px;background:rgba(255,255,255,.93);border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.2);max-width:330px;width:100%}
+.names{font-family:'Playfair Display',serif;font-size:26px;letter-spacing:2px;margin:8px 0 4px;color:var(--navy)}
+.btn{background:var(--navy);color:var(--pale);padding:13px 25px;border-radius:30px;border:1px solid var(--gold);font-size:15px;margin-top:14px}
+.couple-img{width:100%;height:auto;max-height:420px;border-radius:16px;border:2px solid var(--gold);margin:12px 0;object-fit:contain;background:#fff;display:block}
+.cover .couple-img{height:min(38vh,300px);max-height:300px;margin:8px 0;object-fit:contain}
+.script{font-family:'Great Vibes',cursive;font-size:50px;color:var(--navy);line-height:1.2}
+.gold-line{color:var(--gold);letter-spacing:5px;margin:12px 0}
+.arabic{font-family:'Amiri',serif;font-size:32px;color:var(--gold);direction:rtl;unicode-bidi:isolate;letter-spacing:0;line-height:1.8;margin:10px 0 18px}
+.card{background:white;border:1.5px solid var(--gold);border-radius:20px;padding:24px 16px;margin:18px 0;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.arch{background:#fff;border:3px solid var(--gold);border-radius:200px 200px 24px 24px;padding:38px 20px;overflow:hidden}
+.navy{background:var(--navy);color:white;padding:45px 12px}
+.navy h2{color:var(--pale)}
+.count{display:flex;gap:8px;justify-content:center;margin:20px auto;max-width:360px;padding:0 6px}
+.count div{flex:1;min-width:0;background:var(--pale);color:var(--navy);border-radius:14px;padding:12px 2px;border:1px solid var(--gold)}
+.count b{font-size:23px;display:block;font-family:'Playfair Display',serif}
+.event-time{font-size:24px;color:var(--gold);font-weight:bold}
+.map-link{display:inline-block;background:var(--navy);color:var(--pale);padding:12px 22px;border-radius:25px;text-decoration:none;margin-top:15px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.gallery figure{background:#fff;border:1px solid var(--gold);padding:8px;border-radius:15px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.gallery img{width:100%;height:190px;object-fit:cover;border-radius:10px;display:block;background:#fff}
+.gallery figcaption{font-family:'Great Vibes',cursive;font-size:22px;color:var(--navy);padding:8px 2px 2px}
+.music{position:fixed;bottom:18px;right:18px;z-index:90;background:var(--gold);color:var(--navy);width:50px;height:50px;border-radius:50%;border:2px solid white;font-size:21px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+input,textarea,select{width:100%;padding:13px;border-radius:12px;border:1px solid var(--gold);margin:8px 0;background:#FFFDF8;color:var(--navy);font-size:16px}
+.rsvp-btns{display:flex;gap:10px;margin:10px 0}
+.rsvp-btns button{flex:1;padding:13px;border-radius:12px;border:1.5px solid var(--gold);background:white}
+.rsvp-btns button.active{background:var(--navy);color:var(--pale)}
+.gift-number{font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);letter-spacing:1px;margin:8px 0}
+#hujan{position:fixed;inset:0;z-index:80;pointer-events:none;overflow:hidden}
+.petal{position:absolute;top:-30px;pointer-events:none;animation:jatuh linear forwards}
+@keyframes jatuh{0%{transform:translateY(-30px) rotate(0deg);opacity:0}10%{opacity:1}100%{transform:translateY(110vh) rotate(360deg);opacity:.7}}
+footer{padding:25px;background:var(--navy);color:var(--pale)}
+.guestbook-note{font-size:15px;margin:8px 0 16px}
+.date-box{display:flex;align-items:center;justify-content:center;border:1.5px solid var(--gold);border-radius:14px;overflow:hidden;margin:14px 6px}
+.date-box div{flex:1;padding:10px 4px;font-size:16px;color:var(--navy)}
+.date-box div:nth-child(2){border-left:1.5px solid var(--gold);border-right:1.5px solid var(--gold);background:#FDF6E8}
+.date-num{font-family:'Playfair Display',serif;font-size:32px;line-height:1;display:block;color:var(--navy)}
+.date-month{font-size:12px;letter-spacing:1px}
+.nickname{font-family:'Great Vibes',cursive;font-size:36px;color:#C9A96A;display:block;margin:4px 0 8px;line-height:1;opacity:1 !important;visibility:visible !important;transform:none !important}
+.nickname-small{font-family:'Great Vibes',cursive;font-size:28px;color:#C9A96A;line-height:1}
+.love-item{background:#FFFDF8;border:1.5px solid var(--gold);border-radius:16px;padding:18px;margin:16px 0;text-align:left}
+.love-item b{color:var(--navy);font-size:19px;display:block;margin-bottom:4px}
+.love-emoji{font-size:28px;display:block;margin-bottom:6px}
+.reveal{opacity:0;visibility:hidden;transform:translateY(50px) scale(.92);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.3,1.2);will-change:opacity,transform}
+.reveal.from-left{transform:translateX(-80px) scale(.92)}
+.reveal.from-right{transform:translateX(80px) scale(.92)}
+.reveal.from-bottom{transform:translateY(50px) scale(.92)}
+.reveal.from-top{transform:translateY(-70px) scale(.92)}
+.reveal.from-zoom{transform:scale(.7);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.9,.3,1.4)}
+.reveal.show{opacity:1;visibility:visible;transform:translateX(0) translateY(0) scale(1)}
+#HCB_comment_box{margin-top:12px;text-align:left;font-family:'Cormorant Garamond',serif !important;font-size:16px;width:100% !important;max-width:100% !important;overflow:hidden !important}
+#HCB_comment_box *{box-sizing:border-box !important;max-width:100% !important}
+#HCB_comment_box a{color:var(--navy)}
+#HCB_comment_box input[type="text"],#HCB_comment_box textarea{width:100% !important;display:block !important;font-family:'Cormorant Garamond',serif !important;font-size:16px !important;border:1px solid var(--gold) !important;border-radius:12px !important;padding:13px !important;background:#FFFDF8 !important;color:var(--navy) !important;margin:8px 0 !important}
+#HCB_comment_box textarea{min-height:100px !important}
+#HCB_comment_box .hcb-comment{border:1px solid #E8DCC3 !important;border-radius:12px !important;padding:12px !important;margin:12px 0 !important;background:#FFFDF8 !important}
+#HCB_comment_box .btn,#HCB_comment_box input[type="submit"],#HCB_comment_box button[type="submit"],#HCB_comment_box #hcb_submit{width:100% !important;display:block !important;background:var(--navy) !important;color:var(--pale) !important;border:1px solid var(--gold) !important;border-radius:30px !important;padding:13px 10px !important;font-size:15px !important;font-weight:bold !important;white-space:normal !important;line-height:1.4 !important;float:none !important;margin:10px 0 0 !important}
+#HCB_comment_box h3,#HCB_comment_box .hcb-comment-header,#HCB_comment_box #hcb_form_add_image,#HCB_comment_box .hcb-image-btn,#HCB_comment_box input[type="file"],#HCB_comment_box .btn-secondary,#HCB_comment_box .hcb-icon,#HCB_comment_box .home-desc,#HCB_comment_box a[href*="htmlcommentbox.com"]{display:none !important}
+#HCB_comment_box .hcb-comment .hcb-comment-tb,#HCB_comment_box .hcb-comment-footer,#HCB_comment_box .comment-actions{display:none !important}
+@media(max-height:700px){.cover{justify-content:flex-start}.frame{margin:8px auto}.cover .couple-img{height:30vh;max-height:220px}.names{font-size:23px}.cover .btn{margin-top:9px;padding:11px 22px}}
+@media(max-width:360px){.count{max-width:320px;gap:6px}.count div{padding:10px 1px}.count b{font-size:21px}.gallery img{height:155px}}
+</style>
 </head>
 <body>
-<div class="wrap">
-
-  <!-- ================= 1. COVER ================= -->
-  <section class="cover">
-    <img src="cover.JPG" alt="Cover Aida Wildan">
-    <div class="cover-ov">
-      <p class="small">THE WEDDING OF</p>
-      <h1 class="script">Aida &amp; Wildan</h1>
-      <p style="letter-spacing:3px;font-size:12px">
-        07 . 12 . 2026 &nbsp;•&nbsp; PLUMBON, CIREBON
-      </p>
-      <p style="font-size:12px;margin-top:10px;opacity:.9">
-        Kepada Yth. Bapak / Ibu / Saudara/i
-      </p>
-      <p style="font-size:14px;font-weight:600">
-        Tamu Undangan
-      </p>
-      <button class="btn" onclick="document.getElementById('isi').scrollIntoView({behavior:'smooth'})">
-        ✉️ Buka Undangan
-      </button>
-    </div>
-  </section>
-
-  <div id="isi">
-
-    <!-- ================= 2. PEMBUKA ================= -->
-    <section>
-      <p class="script" style="font-size:38px;color:#8a5a3b">
-        Assalamu'alaikum Wr. Wb
-      </p>
-      <p class="small" style="margin-top:14px">
-        Dengan memohon rahmat &amp; ridho Allah SWT,
-        kami bermaksud menyempurnakan separuh agama kami
-        dalam ikatan suci pernikahan.
-      </p>
-      <p class="small" style="margin-top:10px">
-        Merupakan suatu kehormatan &amp; kebahagiaan bagi kami
-        apabila Bapak/Ibu/Saudara/i berkenan hadir
-        untuk memberikan doa restu kepada kedua mempelai.
-      </p>
-      <div class="divider"></div>
-      <p style="font-size:13px;line-height:1.8">
-        <i>
-          "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan
-          pasangan-pasangan untukmu dari jenismu sendiri,
-          agar kamu merasa tenteram kepadanya,
-          dan Dia menjadikan di antaramu rasa kasih dan sayang."
-        </i>
-        <br>
-        <b>- QS. Ar-Rum : 21 -</b>
-      </p>
-    </section>
-
-    <!-- ================= 3. MEMPELAI ================= -->
-    <section>
-      <p class="script" style="font-size:34px;color:#8a5a3b">Mempelai</p>
-      <h2 class="serif">Pengantin</h2>
-      <div class="divider"></div>
-      <div class="couple">
-        <div class="card">
-          <img src="aida.jpg" alt="Aida">
-          <h3 class="script">Aida</h3>
-          <p class="small">
-            Putri Tercinta dari<br>
-            <b>Bapak &amp; Ibu Aida</b><br>
-            Plumbon, Cirebon
-          </p>
-          <p style="font-size:12px;color:#8a5a3b;margin-top:8px">@aida</p>
-        </div>
-        <div class="card">
-          <img src="wildan.jpg" alt="Wildan">
-          <h3 class="script">Wildan</h3>
-          <p class="small">
-            Putra Tercinta dari<br>
-            <b>Bapak &amp; Ibu Wildan</b><br>
-            Plumbon, Cirebon
-          </p>
-          <p style="font-size:12px;color:#8a5a3b;margin-top:8px">@wildan</p>
-        </div>
-      </div>
-      <p class="script" style="font-size:32px;margin-top:10px;color:#8a5a3b">&amp;</p>
-      <p class="small">
-        Dua hati yang Allah pertemukan,<br>
-        kini akan disatukan dalam ridho-Nya.
-      </p>
-    </section>
-
-    <!-- ================= 4. SAVE THE DATE ================= -->
-    <section>
-      <p class="script" style="font-size:34px;color:#8a5a3b">Save The Date</p>
-      <h2 class="serif">Akad Nikah &amp; Resepsi</h2>
-      <div class="divider"></div>
-
-      <div class="card">
-        <img src="akad.JPG" alt="Akad">
-        <h2 class="serif" style="margin-top:16px;font-size:24px">
-          Minggu, 07 Desember 2026
-        </h2>
-        <p class="small" style="margin-top:8px">
-          Plumbon, Cirebon<br>
-          Akad : 08.00 - 10.00 WIB<br>
-          Resepsi : 11.00 - 13.00 WIB
-        </p>
-        <a href="https://maps.google.com/?q=Plumbon+Cirebon" target="_blank">
-          <button class="btn btn2" style="margin-top:16px">📍 Lihat Lokasi</button>
-        </a>
-      </div>
-
-      <div class="datebox">
-        <p style="letter-spacing:3px;font-size:11px">MENUJU HARI BAHAGIA</p>
-        <h3 style="margin-top:6px">07 . 12 . 2026</h3>
-        <div class="count">
-          <div><b id="d">00</b>HARI</div>
-          <div><b id="h">00</b>JAM</div>
-          <div><b id="m">00</b>MENIT</div>
-          <div><b id="s">00</b>DETIK</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3 class="serif">Rundown Acara</h3>
-        <div class="timeline">
-          <div><b>08.00</b><span class="small">Akad Nikah</span></div>
-          <div><b>09.30</b><span class="small">Doa &amp; Sungkeman</span></div>
-          <div><b>10.00</b><span class="small">Foto Keluarga</span></div>
-          <div><b>11.00</b><span class="small">Resepsi &amp; Ramah Tamah</span></div>
-          <div><b>12.30</b><span class="small">Hiburan</span></div>
-          <div><b>13.00</b><span class="small">Penutup</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 5. LOVE STORY ================= -->
-    <section>
-      <p class="script" style="font-size:34px;color:#8a5a3b">Love Story</p>
-      <h2 class="serif">Perjalanan Kami</h2>
-      <div class="divider"></div>
-      <div class="card story-card">
-        <p><b>🤍 Pertama Bertemu</b></p>
-        <p class="small">Allah mempertemukan kami di waktu yang paling tepat, di tempat yang tak pernah kami duga. Dari sebuah sapaan sederhana, menjadi percakapan yang tak ingin diakhiri.</p>
-      </div>
-      <div class="card story-card">
-        <p><b>💍 Melamar</b></p>
-        <p class="small">Dengan niat karena Allah, Wildan datang dengan penuh keberanian untuk meminang Aida, disaksikan keluarga tercinta.</p>
-      </div>
-      <div class="card story-card">
-        <p><b>💒 Menuju Halal</b></p>
-        <p class="small">Dan kini, kami siap melangkah ke jenjang yang lebih suci. Mohon doa restu agar rumah tangga kami menjadi sakinah, mawaddah, warahmah.</p>
-      </div>
-    </section>
-
-    <!-- ================= 6. DRESSCODE ================= -->
-    <section>
-      <p class="script" style="font-size:34px;color:#8a5a3b">Dresscode</p>
-      <h2 class="serif">Warna Acara</h2>
-      <p class="small" style="margin-top:8px">Kami akan sangat senang jika kamu hadir dengan nuansa warna ini.</p>
-      <div class="dress">
-        <div class="dot" style="background:#8a5a3b"></div>
-        <div class="dot" style="background:#d9b896"></div>
-        <div class="dot" style="background:#fdf8f1"></div>
-        <div class="dot" style="background:#5a3d2b"></div>
-        <div class="dot" style="background:#c9a07a"></div>
-      </div>
-      <p class="small" style="margin-top:12px">Coklat • Cream • Beige • Putih</p>
-    </section>
-
-    <!-- ================= 7. GALERI ================= -->
-    <section>
-      <p class="script" style="font-size:34px;color:#8a5a3b">Our Moments</p>
-      <h2 class="serif">Galeri Cinta</h2>
-      <p class="small" style="margin-top:8px">
-        Setiap momen bersamamu adalah anugerah terindah yang Allah titipkan.
-      </p>
-      <div class="gallery">
-        <img src="a-little-memory.jpg" alt="A Little Memory">
-        <img src="sweet-moments.JPG" alt="Sweet Moments">
-        <img src="with-you.JPG" alt="With You">
-        <img src="my-favorite-person.JPG" alt="My Favorite Person">
-        <img src="my-favorite-view.JPG" class="wide" alt="My Favorite View">
-        <img src="just-the-two-of-us.JPG" class="wide" alt="Just The Two Of Us">
-      </div>
-      <p class="small" style="margin-top:12px">
-        "Bersamamu, hal yang biasa menjadi istimewa."
-      </p>
-    </section>
-
-    <!-- ================= 8. RSVP ================= -->
-    <section>
-      <p class="script" style="font-size:34px;color:#8a5a3b">RSVP</p>
-      <h2 class="serif">Konfirmasi Kehadiran</h2>
-      <p class="small" style="margin-top:8px">Kehadiranmu sangat berarti bagi kami.</p>
-      <div class="card" style="text-align:left">
-        <label class="small">Nama Kamu</label>
-        <input id="nama" placeholder="Nama Kamu">
-        <label class="small">Konfirmasi</label>
-        <select id="hadir">
-          <option>Hadir</option>
-          <option>Berhalangan</option>
-        </select>
-        <label class="small">Ucapan &amp; Doa</label>
-        <textarea id="ucapan" rows="3" placeholder="Tulis ucapan & doa untuk kami..."></textarea>
-        <button class="btn" style="width:100%" onclick="kirim()">Kirim Konfirmasi ❤️</button>
-        <p class="small" id="hasil" style="text-align:center;margin-top:10px"></p>
-      </div>
-
-      <div class="gift">
-        <p><b>💌 Wedding Gift</b></p>
-        <p class="small" style="margin:8px 0">
-          Doa restu Anda adalah hadiah terindah.<br>
-          Namun jika berkenan memberi tanda kasih:
-        </p>
-        <p><b>BCA - 1234567890</b><br><span class="small">a.n Aida &amp; Wildan</span></p>
-        <button class="btn" onclick="navigator.clipboard.writeText('1234567890');alert('Nomor rekening tersalin!')">Salin Nomor Rekening</button>
-        <p class="small" style="margin-top:10px">Terima kasih atas keikhlasanmu 🤍</p>
-      </div>
-    </section>
-
-    <!-- ================= 9. PROTOKOL ================= -->
-    <section>
-      <p class="script" style="font-size:34px;color:#8a5a3b">Info</p>
-      <h2 class="serif">Catatan Untuk Tamu</h2>
-      <div class="card" style="text-align:left">
-        <p class="small">✨ Datanglah dengan hati yang bahagia</p>
-        <p class="small" style="margin-top:8px">✨ Gunakan pakaian yang sopan &amp; nyaman</p>
-        <p class="small" style="margin-top:8px">✨ Jangan lupa berdoa untuk kedua mempelai</p>
-        <p class="small" style="margin-top:8px">✨ Abadikan momen &amp; tag kami ya!</p>
-      </div>
-    </section>
-
-    <!-- ================= 10. PENUTUP ================= -->
-    <section class="penutup">
-      <img src="penutup.JPG" alt="Penutup">
-      <h1 class="script" style="font-size:48px;margin-top:22px">Aida &amp; Wildan</h1>
-      <p class="small" style="margin-top:10px">
-        Terima kasih atas doa, kehadiran &amp; kasih sayangmu.<br>
-        Kami yang berbahagia,
-      </p>
-      <p style="margin-top:16px;font-size:13px">
-        Keluarga Besar<br>
-        <b>Aida &amp; Wildan</b>
-      </p>
-      <p class="small" style="margin-top:14px">
-        "Dan Kami jadikan kamu berpasang-pasangan agar kamu bersyukur."
-      </p>
-    </section>
-
-    <footer>
-      <p class="small">
-        Made with ❤️ for Aida &amp; Wildan<br>
-        07 . 12 . 2026 • Plumbon, Cirebon
-      </p>
-      <p class="small" style="margin-top:8px;font-size:11px">
-        #AidaWildanWedding
-      </p>
-    </footer>
-
-  </div>
+<div id="hujan"></div>
+<audio id="lagu" loop preload="none">
+<source src="https://mijuinvitation.my.id/wp-content/uploads/2026/10/Janji-Suci-Cover-Saxophone-Yovie-And-Nuno-AudioTrimmer.com_.mp3" type="audio/mpeg">
+</audio>
+<button class="music" id="musicBtn" onclick="toggleMusic()">♪</button>
+<div class="cover" id="cover">
+<div class="frame">
+<p style="letter-spacing:4px;font-size:12px">THE WEDDING OF</p>
+<img src="cover.JPG" class="couple-img" alt="Aida dan Wildan">
+<div class="names">AIDA & WILDAN</div>
+<p class="nickname-small">Idut & Idute</p>
+<p>Selasa, 22 Desember 2026<br>Kp. Darmamukti - Tasikmalaya</p>
+<div style="background:#0F2238;color:white;padding:12px;border-radius:12px;margin-top:12px">
+<p style="font-size:13px">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+<b id="namaTamu" style="font-size:18px">Nama Tamu</b>
 </div>
-
-<button class="music-btn" onclick="alert('Putar lagu pernikahanmu di sini ya beb! 🎵')">🎵</button>
-
+<button class="btn" onclick="buka()">🌸 BUKA UNDANGAN 🌸</button>
+</div>
+<p style="color:#0F2238;margin-top:12px;font-weight:bold">22 . 12 . 2026</p>
+</div>
+<main id="undangan">
+<section>
+<div class="inner">
+<div class="arch">
+<p class="gold-line reveal from-top">✦ THE WEDDING OF ✦</p>
+<h1 class="script reveal from-top" style="transition-delay:.15s">Aida & Wildan</h1>
+<p class="nickname">Idut & Idute</p>
+<p class="reveal from-top" style="transition-delay:.3s">Dengan memohon rahmat dan ridho Allah SWT,</p>
+<p class="reveal from-top" style="transition-delay:.45s">kami bermaksud menyelenggarakan pernikahan kami.</p>
+<img class="couple-img reveal from-zoom" style="transition-delay:.6s" src="akad.JPG" alt="Aida dan Wildan">
+<p class="gold-line reveal from-top" style="transition-delay:.75s">22 . 12 . 2026</p>
+<p class="reveal from-top" style="transition-delay:.9s">Selasa, 22 Desember 2026</p>
+<p class="reveal from-top" style="transition-delay:1s">Kp. Darmamukti - Tasikmalaya</p>
+</div>
+</div>
+</section>
+<section>
+<div class="inner">
+<div class="card reveal from-bottom">
+<p class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+<p>“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu merasa tenteram di sampingnya.”</p>
+<p style="margin-top:12px;color:#C9A96A">QS. Ar-Rum: 21</p>
+</div>
+</div>
+</section>
+<section>
+<div class="inner">
+<p class="gold-line reveal from-bottom">✦ BRIDE & GROOM ✦</p>
+<div class="card">
+<img class="couple-img reveal from-zoom" src="aida.jpg" alt="Aida Lestari">
+<h2 class="script reveal from-left" style="transition-delay:.5s">Aida Lestari</h2>
+<span class="nickname">"Idut"</span>
+<p class="reveal from-left" style="transition-delay:.7s">Putri dari</p>
+<p class="reveal from-left" style="transition-delay:.85s"><b>Bapak Wawan & Ibu Manah</b></p>
+</div>
+<h2 class="script reveal from-zoom" style="font-size:42px">&</h2>
+<div class="card">
+<img class="couple-img reveal from-zoom" src="wildan.jpg" alt="Wildan Sapari Ilmi">
+<h2 class="script reveal from-right" style="transition-delay:.5s">Wildan Sapari Ilmi</h2>
+<span class="nickname">"Idute"</span>
+<p class="reveal from-right" style="transition-delay:.7s">Putra dari</p>
+<p class="reveal from-right" style="transition-delay:.85s"><b>Bapak Ejeb (Alm) & Ibu Cucu</b></p>
+</div>
+</div>
+</section>
+<section>
+<div class="inner">
+<p class="gold-line reveal from-bottom">✦ LOVE STORY ✦</p>
+<h2 class="script reveal from-bottom">Dari Chat Jadi Halal</h2>
+<p class="reveal from-bottom">Ceritanya Aku & Dia, singkat tapi sayangnya panjang.<br>Yuk, dibaca pelan-pelan ya...</p>
+<div class="love-item reveal from-left">
+<span class="love-emoji">💬</span>
+<b>1. Awalnya Cuma Chat Iseng...</b>
+<p>Ceritanya, semua ini berawal dari satu chat iseng. Niatnya cuma mau nanya kabar, "Eh, lagi apa?" gitu doang.<br><br>
+Tapi siapa sangka, dari chat yang niatnya cuma 5 menit, malah keterusan sampe tengah malem. Tiap hari chat, tiap hari nungguin balesan. Aku centilnya kebangetan di chat, Dia sok cool padahal tiap HP bunyi langsung senyum-senyum sendiri.<br><br>
+Udah kaya orang pacaran, padahal belum jadian. Hmm...</p>
+</div>
+<div class="love-item reveal from-right">
+<span class="love-emoji">🫣</span>
+<b>2. Pas Ketemu, Kok Malah Diem?</b>
+<p>Nah, ini bagian paling lucu.<br><br>
+Di chat berani banget, gombalnya gak abis-abis. Giliran ketemu langsung... JRRENG! Dua-duanya langsung diem. Saling lirik, saling senyum, tapi grogi setengah mati.<br><br>
+Aku yang centil di chat tiba-tiba jadi pendiem. Dia yang sok cool di chat tiba-tiba jadi salting. Padahal di dalam hati, deg-degannya udah kaya mau ujian nasional.<br><br>
+Tapi dari grogi itulah, kami tau... "Oh, ini beneran. Ini bukan cuma chat iseng lagi."</p>
+</div>
+<div class="love-item reveal from-left">
+<span class="love-emoji">💍</span>
+<b>3. Terus Gimana? Penasaran Kan?</b>
+<p>Dari yang awalnya cuma berani bilang "jangan lupa makan ya" lewat chat...<br><br>
+Sekarang Dia udah berani bilang, "aku mau jaga kamu seumur hidup."<br><br>
+Dari yang cuma bisa nungguin balesan chat, sekarang udah mau jadi sehidup semati. Dan hari ini, kalian semua jadi saksi, kalo chat iseng Aku & Dia itu ternyata bisa berakhir jadi HALAL.<br><br>
+<b>Jadi... masih percaya gak sama yang namanya jodoh dari chat? Hmmm.. memang benar ya kata orang jodoh bisa datang dari arah mana aja</b></p>
+</div>
+</div>
+</section>
+<section class="navy">
+<p class="gold-line reveal from-bottom">✦ SAVE THE DATE ✦</p>
+<h2 class="script reveal from-bottom">Counting Down</h2>
+<p class="reveal from-bottom">Menuju hari bahagia Idut & Idute</p>
+<div class="count reveal from-zoom">
+<div><b id="days">00</b><span>Hari</span></div>
+<div><b id="hours">00</b><span>Jam</span></div>
+<div><b id="minutes">00</b><span>Menit</span></div>
+<div><b id="seconds">00</b><span>Detik</span></div>
+</div>
+<p class="reveal from-bottom">Selasa, 22 Desember 2026</p>
+</section>
+<section>
+<div class="inner">
+<p class="gold-line reveal from-bottom">✦ WEDDING EVENT ✦</p>
+<h2 class="script reveal from-bottom">Rangkaian Acara</h2>
+<div class="card reveal from-left">
+<h2 class="script">Akad Nikah</h2>
+<div class="date-box">
+  <div>Selasa</div>
+  <div><span class="date-num" data-target="22">1</span><span class="date-month">Desember</span></div>
+  <div>2026</div>
+</div>
+<p class="event-time">08.00 WIB</p>
+</div>
+<div class="card reveal from-right">
+<h2 class="script">Resepsi</h2>
+<div class="date-box">
+  <div>Selasa</div>
+  <div><span class="date-num" data-target="22">1</span><span class="date-month">Desember</span></div>
+  <div>2026</div>
+</div>
+<p class="event-time">10.00 WIB</p>
+</div>
+<div class="card reveal from-bottom">
+<h3>Lokasi Acara</h3>
+<p>Rumah Mempelai Wanita</p>
+<p>Kp. Darmamukti RT 14 / RW 003, Desa Mandalasari, Kecamatan Puspahiang, Kabupaten Tasikmalaya.</p>
+<a class="map-link" href="https://maps.google.com/?q=Darmamukti+Mandalasari+Puspahiang+Tasikmalaya" target="_blank" rel="noopener">Lihat Lokasi</a>
+</div>
+</div>
+</section>
+<section>
+<div class="inner">
+<p class="gold-line reveal from-bottom">✦ OUR MOMENTS ✦</p>
+<h2 class="script reveal from-bottom">Our Little Story</h2>
+<p class="reveal from-bottom">Sepenggal cerita, sejuta kenangan.</p>
+<div class="gallery">
+<figure class="reveal from-zoom" style="transition-delay:.05s"><img src="a-little-memory.jpg" alt="Momen Aida dan Wildan 1"><figcaption>A little memory</figcaption></figure>
+<figure class="reveal from-zoom" style="transition-delay:.15s"><img src="sweet-moments.JPG" alt="Momen Aida dan Wildan 2"><figcaption>Sweet moments</figcaption></figure>
+<figure class="reveal from-zoom" style="transition-delay:.05s"><img src="with-you.JPG" alt="Momen Aida dan Wildan 3"><figcaption>With you</figcaption></figure>
+<figure class="reveal from-zoom" style="transition-delay:.15s"><img src="my-favorite-person.JPG" alt="Momen Aida dan Wildan 4"><figcaption>My favorite person</figcaption></figure>
+<figure class="reveal from-zoom" style="transition-delay:.05s"><img src="my-favorite-view.JPG" alt="Ilustrasi Aida dan Wildan outfit hitam"><figcaption>My favorite view</figcaption></figure>
+<figure class="reveal from-zoom" style="transition-delay:.15s"><img src="just-the-two-of-us.JPG" alt="Ilustrasi Aida dan Wildan outfit krem"><figcaption>Just the two of us</figcaption></figure>
+</div>
+</div>
+</section>
+<section>
+<div class="inner">
+<div class="card reveal from-bottom">
+<p class="gold-line">✦ WEDDING GIFT ✦</p>
+<h2 class="script">Tanda Kasih</h2>
+<p>Doa restu Anda merupakan hadiah terindah bagi kami. Namun apabila ingin memberikan tanda kasih, dapat melalui:</p>
+<div class="card reveal from-left">
+<h3>DANA</h3>
+<p>Idut - Aida</p>
+<p class="gift-number">0822 1824 3280</p>
+<button class="btn" onclick="salin('082218243280')">Salin Nomor</button>
+</div>
+<div class="card reveal from-right">
+<h3>SeaBank</h3>
+<p>Idute - Wildan</p>
+<p class="gift-number">9014 5998 0109</p>
+<button class="btn" onclick="salin('901459980109')">Salin Rekening</button>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="inner">
+<div class="card reveal from-bottom">
+<p class="gold-line">✦ RSVP ✦</p>
+<h2 class="script">Konfirmasi Kehadiran</h2>
+<p>Mohon konfirmasi kehadiran Anda untuk membantu kami mempersiapkan acara.</p>
+<input type="text" id="nama" placeholder="Nama Anda">
+<select id="jumlah">
+<option value="1">1 orang</option>
+<option value="2">2 orang</option>
+<option value="3">3 orang</option>
+<option value="4">4 orang</option>
+<option value="5">5 orang</option>
+</select>
+<div class="rsvp-btns">
+<button type="button" id="hadirBtn" class="active" onclick="pilihHadir('Hadir')">Hadir</button>
+<button type="button" id="tidakBtn" onclick="pilihHadir('Tidak Hadir')">Tidak Hadir</button>
+</div>
+<button class="btn" style="width:100%" onclick="kirimRSVP()">Kirim Konfirmasi WhatsApp</button>
+</div>
+</div>
+</section>
+<section>
+<div class="inner">
+<div class="card reveal from-bottom">
+<p class="gold-line">✦ WEDDING GUESTBOOK ✦</p>
+<h2 class="script">Ucapan & Doa</h2>
+<p class="guestbook-note">Tuliskan doa dan ucapan terbaik untuk Idut & Idute. Ucapan yang dikirim dapat dibaca oleh tamu lainnya.</p>
+<div id="HCB_comment_box">
+<a href="https://www.htmlcommentbox.com">Comment Box</a> sedang memuat ucapan...
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="inner">
+<div class="arch">
+<img class="couple-img reveal from-zoom" src="penutup.JPG" alt="Aida dan Wildan">
+<p class="gold-line reveal from-top" style="transition-delay:.4s">✦ ✦ ✦</p>
+<h2 class="script reveal from-top" style="transition-delay:.55s">Terima Kasih</h2>
+<p class="reveal from-top" style="transition-delay:.7s">Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+<h2 class="script reveal from-top" style="margin-top:20px;transition-delay:.85s">Idut & Idute</h2>
+<p class="reveal from-top" style="transition-delay:1s">Aida & Wildan - 22 Desember 2026</p>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>IDUT & IDUTE</p>
+<p>AIDA & WILDAN - 22 . 12 . 2026</p>
+<p style="font-size:13px;margin-top:8px">Made with love ♡</p>
+</footer>
 <script>
-  // COUNTDOWN
-  const target = new Date("2026-12-07T08:00:00+07:00").getTime();
-  setInterval(() => {
-    const now = new Date().getTime();
-    const diff = target - now;
-    if (diff < 0) return;
-    document.getElementById("d").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-    document.getElementById("h").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    document.getElementById("m").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    document.getElementById("s").innerText = Math.floor((diff % (1000 * 60)) / 1000);
-  }, 1000);
-
-  // RSVP
-  function kirim() {
-    const n = document.getElementById("nama").value;
-    if (!n) {
-      alert("Isi namamu dulu ya beb!");
-      return;
+const audio=document.getElementById('lagu');
+function buka(){
+document.getElementById('cover').classList.add('hide');
+if(audio){
+audio.play().then(()=>{document.getElementById('musicBtn').textContent='♫'}).catch(()=>{});
+}
+window.scrollTo({top:0,behavior:'smooth'});
+initReveal();
+}
+let revealStarted=false;
+function initReveal(){
+if(revealStarted) return;
+revealStarted=true;
+const io=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add('show');
+io.unobserve(e.target);
+}
+});
+},{threshold:0.1,rootMargin:"0px 0px -20px 0px"});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+function animateDate(el){
+  let target = parseInt(el.dataset.target);
+  let cur = 1;
+  let timer = setInterval(()=>{
+    el.textContent = cur;
+    if(cur >= target) clearInterval(timer);
+    cur++;
+  }, 60);
+}
+const dateObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      animateDate(e.target);
+      dateObserver.unobserve(e.target);
     }
-    document.getElementById("hasil").innerText = "Terima kasih " + n + " ❤️ Konfirmasimu sudah kami terima!";
-    document.getElementById("nama").value = "";
-    document.getElementById("ucapan").value = "";
-  }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.date-num').forEach(el=>dateObserver.observe(el));
+function toggleMusic(){
+if(!audio)return;
+if(audio.paused){
+audio.play().then(()=>{document.getElementById('musicBtn').textContent='♫'}).catch(()=>alert('Musik belum dapat diputar. Coba tekan sekali lagi.'));
+}else{
+audio.pause();
+document.getElementById('musicBtn').textContent='♪';
+}
+}
+const params=new URLSearchParams(window.location.search);
+const namaTamu=params.get('to');
+if(namaTamu){
+const namaUndangan=namaTamu.replace(/\+/g,' ');
+document.getElementById('namaTamu').textContent=namaUndangan;
+document.getElementById('nama').value=namaUndangan;
+}
+const tanggalAcara=new Date('2026-12-22T08:00:00+07:00').getTime();
+function updateCountdown(){
+const jarak=tanggalAcara-Date.now();
+const ids=['days','hours','minutes','seconds'];
+if(jarak<=0){
+ids.forEach(id=>document.getElementById(id).textContent='00');
+return;
+}
+document.getElementById('days').textContent=Math.floor(jarak/86400000);
+document.getElementById('hours').textContent=Math.floor((jarak%86400000)/3600000);
+document.getElementById('minutes').textContent=Math.floor((jarak%3600000)/60000);
+document.getElementById('seconds').textContent=Math.floor((jarak%60000)/1000);
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+let statusHadir='Hadir';
+function pilihHadir(status){
+statusHadir=status;
+document.getElementById('hadirBtn').classList.toggle('active',status==='Hadir');
+document.getElementById('tidakBtn').classList.toggle('active',status==='Tidak Hadir');
+}
+function kirimRSVP(){
+const nama=document.getElementById('nama').value.trim();
+const jumlah=document.getElementById('jumlah').value;
+if(!nama){
+alert('Mohon isi nama terlebih dahulu.');
+document.getElementById('nama').focus();
+return;
+}
+const teks=
+'Assalamualaikum, saya ingin mengonfirmasi undangan pernikahan Aida & Wildan.\n\n'+
+'Nama: '+nama+'\n'+
+'Konfirmasi: '+statusHadir+'\n'+
+'Jumlah tamu: '+jumlah;
+window.open('https://wa.me/6282218243280?text='+encodeURIComponent(teks),'_blank');
+}
+function salin(teks){
+if(navigator.clipboard&&window.isSecureContext){
+navigator.clipboard.writeText(teks)
+.then(()=>alert('Berhasil disalin!'))
+.catch(()=>salinManual(teks));
+}else{
+salinManual(teks);
+}
+}
+function salinManual(teks){
+const area=document.createElement('textarea');
+area.value=teks;
+area.style.position='fixed';
+area.style.opacity='0';
+document.body.appendChild(area);
+area.select();
+try{
+document.execCommand('copy');
+alert('Berhasil disalin!');
+}catch(e){
+alert('Silakan salin nomor ini: '+teks);
+}
+document.body.removeChild(area);
+}
+const bunga=['❄️','🤍'];
+const wadahHujan=document.getElementById('hujan');
+function buatBunga(){
+const elemen=document.createElement('span');
+elemen.className='petal';
+elemen.textContent=bunga[Math.floor(Math.random()*bunga.length)];
+elemen.style.left=Math.random()*100+'vw';
+elemen.style.fontSize=(12+Math.random()*12)+'px';
+elemen.style.animationDuration=(3+Math.random()*3)+'s';
+wadahHujan.appendChild(elemen);
+setTimeout(()=>elemen.remove(),6500);
+}
+for(let i=0;i<10;i++){
+setTimeout(buatBunga,i*350);
+}
+setInterval(buatBunga,1200);
+setInterval(function(){
+  var box=document.getElementById('HCB_comment_box');
+  if(!box) return;
+  box.querySelectorAll('h3, .hcb-comment-header, b').forEach(function(el){
+    if(el.textContent.trim()==='Ucapan & Doa') el.style.display='none';
+  });
+  box.innerHTML = box.innerHTML
+    .replaceAll('Thank you for commenting!','Terima kasih sudah mengirim ucapan! 💌')
+    .replaceAll('within the last minute','baru saja')
+    .replaceAll('within the last hour','1 jam yang lalu')
+    .replaceAll('Like','Suka')
+    .replaceAll('Reply','Balas')
+    .replaceAll('Flag','Laporkan');
+},1000);
+</script>
+<script>
+window.hcb_user=window.hcb_user||{};
+hcb_user.PAGE='aida-wildan-22122026-baru';
+hcb_user.comments_header='';
+hcb_user.name_label='Nama';
+hcb_user.content_label='Tuliskan ucapan dan doa di sini...';
+hcb_user.submit='Kirim Ucapan';
+hcb_user.no_comments_msg='Belum ada ucapan. Jadilah yang pertama mengirim doa!';
+hcb_user.add='Tulis ucapan';
+hcb_user.again='Kirim ucapan lainnya';
+hcb_user.err_denied='Maaf, ucapan tidak dapat dikirim.';
+hcb_user.err_spam='Ucapan terdeteksi sebagai spam.';
+hcb_user.MAX_CHARS=2048;
+hcb_user.RELATIVE_DATES=true;
+</script>
+<script type="text/javascript" id="hcb">
+if(!window.hcb_user){window.hcb_user={};}
+(function(){
+var s=document.createElement('script'),
+l=hcb_user.PAGE||(''+window.location).replace(/'/g,'%27'),
+h='https://www.htmlcommentbox.com';
+s.setAttribute('type','text/javascript');
+s.setAttribute('src',h+'/jread?page='+encodeURIComponent(l).replace('+','%2B')+'&mod=%241%24wq1rdBcg%24pM.q1F1i0RqS5b0J7sUoWw1&opts=16798&num=20&ts=1763080000000');
+document.getElementsByTagName('head')[0].appendChild(s);
+})();
 </script>
 </body>
 </html>
